@@ -7,9 +7,12 @@ The Stock Virtual Machine is a web application that is designed to simulate buyi
 Using the Stock Virtual Machine, user will get the full experience of buying and selling stocks without having to invest any actual currency.
 
 Team Members:
-Sujay Patel  
-   Tasks: Home and Registration Page (Front End) 
+
+Sujay Patel
+Tasks: Home and Registration Page (Front End) 
+
 Linisha Basu
-   Tasks: Login and Help Page (Front End)
+Tasks: Login and Help Page (Front End)
+
 Sujal Patel
-   Tasks: Databases and Validation (Back End)
+Tasks: Databases and Validation (Back End)
