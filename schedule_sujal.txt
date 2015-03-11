@@ -1,0 +1,5 @@
+Sujal Patel
+Schedule and deliverable: 
+       Establishing/Storing/Retriving Database Connection -- Wed 03/11 by 12 pm (estimate: 8 hrs)
+       Login Form plus Valiad Username and Password with Datebase -- Thur 03/12 by 12 pm (estimate: 5 hrs)
+       CSS StyleSheet and Design  -- Fri 03/13 by 12 pm (estimate: 6 hrs)
