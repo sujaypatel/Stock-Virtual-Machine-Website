@@ -1,5 +1,5 @@
 Linisha Basu
 Schedule and deliverable:
-       Help Page with FAQ using JQuery features - Wed 03/11 by 12 pm (estimate: 8 hrs)
+       Help Page with FAQ using JQuery features - Wed 03/11 by 11:59 pm (estimate: 8 hrs)
        Home Page Adding Pictures and Content/Information -- Thur 03/12 by 12 pm (estimate: 6 hrs)
        Create Invalid Username/Password Page -- Fri 03/13 by 12 pm (estimate: 2 hrs)
