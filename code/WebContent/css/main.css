@@ -1,0 +1,244 @@
+@CHARSET "ISO-8859-1";
+
+.LoginBackGround-Image {
+	background-image: url(../images/StockMarket.jpg);	
+}
+
+.FormDesign {
+	background-color: rgba(80, 25, 25, 0.25);
+	max-width: 700px;
+	padding: 10px 30px 30px 30px;
+	margin: 30px auto 0 auto;
+	color: #800000;
+	font-size: 105%;
+	font-family: Georgia;
+}
+
+.PortfolioDesign {
+	background-color: white;
+	max-width: 700px;
+	padding: 10px 30px 30px 30px;
+	margin: 30px auto 0 auto;
+	color: #800000;
+	font-size: 105%;
+	font-family: Georgia;
+}
+
+p {
+	color: #800000;
+	font-size: 105%;
+	font-family: Georgia;
+}
+
+h1 {
+	color: #800040;
+	font-family: Georgia;
+}
+
+h2 {
+	color: green;
+	font-family: Georgia;
+}
+
+h3 {
+	color: #324fe1;
+	font-family: Georgia;
+}
+
+h4 {
+	color: #800080;
+	font-family: Georgia;
+}
+
+h5 {
+	color: brown;
+	font-family: Georgia;
+}
+
+body {
+	background-color: #FBF5E6;
+	font-size: 1.0em;
+	font-family: Georgia;
+}
+
+ul {
+	list-style-type: none;
+	overflow: hidden;
+	width: 1000px;
+}
+
+ul li {
+	float: left;
+}
+
+.navbar {
+	padding-left: 200px;
+	background: #4d4d4d;
+	border-radius: 50px;
+}
+
+a {
+	width: 100px;
+	color: #ffffff;
+}
+
+a:link {
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 12px;
+	margin-right: 10px;
+	border-radius: 5px;
+	color: #fff;
+	line-height: 40px;
+	display: inline-block;
+}
+
+a:hover {
+	color: #ffff80;
+	background: #c52d2f;
+}
+
+table, th, td {
+	border: 1px solid blue;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+}
+
+#move_right {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 20px
+}
+
+label {
+	color: #9932CC;
+	font-weight: bold;
+	font-size: 1.0em;
+	font-weight: 150;
+	font-family: Georgia;
+}
+
+input, textarea {
+	padding: 5px;
+	border: 2px solid #ccc;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.button {
+	font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #400090;
+	border: 1px solid #380f59;
+	float: left;
+}
+.FAQ{
+font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #400090;
+	border: 1px solid #380f59;
+	float: left;}
+	
+.CONTACT{
+font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #400090;
+	border: 1px solid #380f59;
+	float: left;}	
+	
+	
+
+#p1{
+   color: #400090;
+	font-size: 105%;
+	font-family: Georgia;
+	}
+
+
+.button2 {
+	font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #400090;
+	border: 1px solid #380f59;
+}
+.sellButton {
+	font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #c73c38;
+	border: 1px solid #380f59;
+}
+.buyButton {
+	font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #50952f;
+	border: 1px solid #380f59;
+}
+.searchButton {
+	font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #723e86;
+	border: 1px solid #380f59;
+}
+.logoutButton {
+	font-family: Georgia;
+	font-size: 1.0em;
+	font-weight: 150;
+	border-radius: 4px;
+	padding: 0.6em 1.25em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	background: #feaa2c;
+	border: 1px solid #380f59;
+}
+
+body#home a#homenav, body#register a#registernav, body#login a#loginnav,
+	body#help a#helpnav {
+	color: #ffff80;
+	background: #c52d2f;
+}
