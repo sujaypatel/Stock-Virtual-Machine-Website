@@ -1,4 +1,4 @@
 Schedule and Deliverable:
-       Registration Form Page and Validation of Each Field -- Thur 03/12 by 12 pm (estimate: 8 hrs)
-       Forgot Password Page and Validatation of Answers to the Questions -- Wed 03/11 by 12 pm (estimate: 6 hrs)
-       Contact Page -- Fri 03/13 by 12 pm (estimate: 2 hrs)
+	Forgot Password Page and Provide List of Questions to Choose From -- Wed 03/11 by 11:59 pm (estimate: 6 hrs)
+       	Registration Form Page and Validation of Each Field -- Thur 03/12 by 11:59 pm (estimate: 8 hrs)
+       	Contact Page -- Fri 03/13 by 11:59 pm (estimate: 2 hrs)
