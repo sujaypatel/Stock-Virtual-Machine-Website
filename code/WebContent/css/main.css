@@ -141,41 +141,11 @@ input, textarea {
 	border: 1px solid #380f59;
 	float: left;
 }
-.FAQ{
-font-family: Georgia;
-	font-size: 1.0em;
-	font-weight: 150;
-	border-radius: 4px;
-	padding: 0.6em 1.25em;
-	cursor: pointer;
-	text-align: center;
-	color: white;
-	background: #400090;
-	border: 1px solid #380f59;
-	float: left;}
-	
-.CONTACT{
-font-family: Georgia;
-	font-size: 1.0em;
-	font-weight: 150;
-	border-radius: 4px;
-	padding: 0.6em 1.25em;
-	cursor: pointer;
-	text-align: center;
-	color: white;
-	background: #400090;
-	border: 1px solid #380f59;
-	float: left;}	
-	
-	
-
 #p1{
    color: #400090;
 	font-size: 105%;
 	font-family: Georgia;
 	}
-
-
 .button2 {
 	font-family: Georgia;
 	font-size: 1.0em;
