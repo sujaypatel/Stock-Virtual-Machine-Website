@@ -8,13 +8,14 @@
 </head>
 <body id="register">
 	<div class="navbar">
-	   <span class="welcome">Stock Virtual Machine</span>
+		<span class="welcome">Stock Virtual Machine</span>
 		<ul>
 			<li><a id="homenav" href="Home.jsp"> HOME</a></li>
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
 			<li><a id="loginnav" href="Login.jsp"> LOGIN</a></li>
 			<li><a id="helpnav" href="Help.jsp"> HELP</a></li>
-			<li><a id="helpnav" href="AboutUs.jsp"><span> ABOUT US </span></a></li>
+			<li><a id="aboutnav" href="AboutUs.jsp"><span> ABOUT
+						US </span></a></li>
 		</ul>
 	</div>
 	<%!String errorString = "";%>

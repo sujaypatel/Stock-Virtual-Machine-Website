@@ -10,15 +10,13 @@
 	<div class="navbar">
 		<span class="welcome">Stock Virtual Machine</span>
 		<ul>
-
 			<li><a id="homenav" href="Home.jsp"> <span>HOME </span></a></li>
 			<li><a id="registernav" href="Register.jsp"> <span>
 						SIGN UP </span></a></li>
 			<li><a id="loginnav" href="Login.jsp"> <span> LOGIN </span></a></li>
 			<li><a id="helpnav" href="Help.jsp"><span> HELP </span></a></li>
-			<li><a id="helpnav" href="AboutUs.jsp"><span> ABOUT US </span></a></li>
-
-
+			<li><a id="aboutnav" href="AboutUs.jsp"><span> ABOUT
+						US </span></a></li>
 		</ul>
 	</div>
 	<form action="LoginServlet" class=FormDesign>
@@ -49,9 +47,8 @@
 				</div>
 				<br>
 				<div>
-					<input type="submit" class='button' value="SIGNIN" /> <br>
-					<br> <a class="fp" href="ForgotPassword.jsp">Forgot
-						Password</a>
+					<input type="submit" class='button' value="SIGNIN" /> <br> <br>
+					<a class="fp" href="ForgotPassword.jsp">Forgot Password</a>
 
 				</div>
 			</div>

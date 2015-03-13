@@ -136,12 +136,12 @@ li a:hover {
 	background: #c52d2f;
 }
 
-table,th,td {
+table, th, td {
 	border: 1px solid blue;
 	border-collapse: collapse;
 }
 
-th,td {
+th, td {
 	padding: 5px;
 }
 
@@ -159,7 +159,7 @@ label {
 	font-family: Georgia;
 }
 
-input,textarea {
+input, textarea {
 	padding: 5px;
 	border: 2px solid #ccc;
 	-webkit-border-radius: 5px;
@@ -251,8 +251,8 @@ input,textarea {
 	border: 1px solid #380f59;
 }
 
-body#home a#homenav,body#register a#registernav,body#login a#loginnav,body#help a#helpnav
-	{
+body#home a#homenav, body#register a#registernav, body#login a#loginnav,
+	body#help a#helpnav, body#about a#aboutnav {
 	color: #ffff80;
 	background: #c52d2f;
 }
