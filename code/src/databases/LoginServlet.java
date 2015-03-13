@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 					.executeQuery("select * from public.\"Login\" where username='"
 							+ userName + "' and password = '" + password + "';");
 			while (rs.next()) {
+				System.out.println("successfully");
 				return true;
 			}
 			return false;

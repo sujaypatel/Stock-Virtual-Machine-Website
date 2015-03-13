@@ -4,7 +4,7 @@
 <title>Forgot Username and Password</title>
 </head>
 <body>
-	<form role="form" action="SecretServlet" method="post"
+	<form action="SecretServlet" method="post"
 		id="ForgetPassword-form">
 		<h4>
 			<label>SECRET QUESTION</label>
