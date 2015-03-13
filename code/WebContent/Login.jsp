@@ -2,17 +2,23 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Lobster'
+	rel='stylesheet' type='text/css'>
 <title>Login Page</title>
 </head>
 <body id="login">
 	<div class="navbar">
+		<span class="welcome">Stock Virtual Machine</span>
 		<ul>
-			<li><img src="images/logo.png" alt="logo" HSPACE=10></li>
+
 			<li><a id="homenav" href="Home.jsp"> <span>HOME </span></a></li>
 			<li><a id="registernav" href="Register.jsp"> <span>
 						SIGN UP </span></a></li>
 			<li><a id="loginnav" href="Login.jsp"> <span> LOGIN </span></a></li>
 			<li><a id="helpnav" href="Help.jsp"><span> HELP </span></a></li>
+			<li><a id="helpnav" href="AboutUs.jsp"><span> ABOUT US </span></a></li>
+
+
 		</ul>
 	</div>
 	<form action="LoginServlet" class=FormDesign>
@@ -43,9 +49,11 @@
 				</div>
 				<br>
 				<div>
-					<input type="submit" class='button' value="SIGNIN">
+					<input type="submit" class='button' value="SIGNIN" /> <br>
+					<br> <a class="fp" href="ForgotPassword.jsp">Forgot
+						Password</a>
+
 				</div>
-				<br> <a href="ForgotPassword.jsp">Forgot Password</a>
 			</div>
 		</fieldset>
 	</form>

@@ -3,17 +3,20 @@
 <head>
 <title>Help Page</title>
 <link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Lobster'
+	rel='stylesheet' type='text/css'>
 </head>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <body id="help">
 	<div class="navbar">
+	    <span class="welcome">Stock Virtual Machine</span>
 		<ul>
-			<li><img src="images/logo.png" alt="logo" HSPACE=10></li>
 			<li><a id="homenav" href="Home.jsp"> HOME</a></li>
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
 			<li><a id="loginnav" href="Login.jsp"> LOGIN</a></li>
 			<li><a id="helpnav" href="Help.jsp"> HELP</a></li>
+			<li><a id="aboutnav" href="AboutUs.jsp"><span> ABOUT US </span></a></li>
 		</ul>
 	</div>
 	<div class=FormDesign>
@@ -21,8 +24,8 @@
 		<fieldset>
 			<script>
 				$(document).ready(function() {
-					$(".FAQ").click(function() {
-						$("p").slideToggle("slow");
+					$(".button").click(function() {
+						$(".FormDesign p").slideToggle("slow");
 					});
 				});
 			</script>
@@ -63,11 +66,13 @@
 				you can use our Stock Virtual Machine web application without actual
 				investing money.</p>
 		</fieldset>
-		<fieldset>
+	</div>
+	<div id ="contactUs" class=FormDesign>
+		<fieldset >
 			<script>
 				$(document).ready(function() {
 					$("button").click(function() {
-						$("p").slideToggle("slow");
+						$("#contactUs p").slideToggle("slow");
 					});
 				});
 			</script>

@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 .LoginBackGround-Image {
-	background-image: url(../images/StockMarket.jpg);	
+	background-image: url(../images/StockMarket.jpg);
 }
 
 .FormDesign {
@@ -61,20 +61,41 @@ body {
 	font-family: Georgia;
 }
 
+.logo-img {
+	width: 355px;
+	height: 45px;
+	position: absolute;
+	padding: 6px 0;
+}
+
 ul {
 	list-style-type: none;
 	overflow: hidden;
 	width: 1000px;
+	position: relative;
+	left: 35%;
+	bottom: 54px;
 }
 
-ul li {
+.welcome {
+	width: 300px;
+	font-family: 'Lobster', cursive;
+	color: #fff;
+	font-size: 42px;
+	position: relative;
+	top: 4px;
+}
+
+.navbar ul li a {
 	float: left;
+	padding: 0 30px;
 }
 
 .navbar {
-	padding-left: 200px;
 	background: #4d4d4d;
 	border-radius: 50px;
+	padding-left: 6%;
+	height: 65px;
 }
 
 a {
@@ -93,17 +114,34 @@ a:link {
 	display: inline-block;
 }
 
-a:hover {
+a.fp {
+	display: inline;
+	position: relative;
+	right: 41%;
+	top: 5px;
+	color: #0B570C;
+	text-decoration: underline;
+}
+
+.navbar ul li img {
+	position: absolute;
+}
+
+.navbar span {
+	margin-left: 0;
+}
+
+li a:hover {
 	color: #ffff80;
 	background: #c52d2f;
 }
 
-table, th, td {
+table,th,td {
 	border: 1px solid blue;
 	border-collapse: collapse;
 }
 
-th, td {
+th,td {
 	padding: 5px;
 }
 
@@ -121,7 +159,7 @@ label {
 	font-family: Georgia;
 }
 
-input, textarea {
+input,textarea {
 	padding: 5px;
 	border: 2px solid #ccc;
 	-webkit-border-radius: 5px;
@@ -141,11 +179,13 @@ input, textarea {
 	border: 1px solid #380f59;
 	float: left;
 }
-#p1{
-   color: #400090;
+
+#p1 {
+	color: #400090;
 	font-size: 105%;
 	font-family: Georgia;
-	}
+}
+
 .button2 {
 	font-family: Georgia;
 	font-size: 1.0em;
@@ -158,6 +198,7 @@ input, textarea {
 	background: #400090;
 	border: 1px solid #380f59;
 }
+
 .sellButton {
 	font-family: Georgia;
 	font-size: 1.0em;
@@ -170,6 +211,7 @@ input, textarea {
 	background: #c73c38;
 	border: 1px solid #380f59;
 }
+
 .buyButton {
 	font-family: Georgia;
 	font-size: 1.0em;
@@ -182,6 +224,7 @@ input, textarea {
 	background: #50952f;
 	border: 1px solid #380f59;
 }
+
 .searchButton {
 	font-family: Georgia;
 	font-size: 1.0em;
@@ -194,6 +237,7 @@ input, textarea {
 	background: #723e86;
 	border: 1px solid #380f59;
 }
+
 .logoutButton {
 	font-family: Georgia;
 	font-size: 1.0em;
@@ -207,8 +251,8 @@ input, textarea {
 	border: 1px solid #380f59;
 }
 
-body#home a#homenav, body#register a#registernav, body#login a#loginnav,
-	body#help a#helpnav {
+body#home a#homenav,body#register a#registernav,body#login a#loginnav,body#help a#helpnav
+	{
 	color: #ffff80;
 	background: #c52d2f;
 }
