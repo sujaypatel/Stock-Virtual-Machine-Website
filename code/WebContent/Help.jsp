@@ -67,20 +67,5 @@
 				investing money.</p>
 		</fieldset>
 	</div>
-	<div id ="contactUs" class=FormDesign>
-		<fieldset >
-			<script>
-				$(document).ready(function() {
-					$("button").click(function() {
-						$("#contactUs p").slideToggle("slow");
-					});
-				});
-			</script>
-			<button class='button'>CONTACT US</button>
-			<br> <br>
-			<p>Email:stockvm@gmail.com</p>
-			<p>Phone no:(630)-567-1234</p>
-		</fieldset>
-	</div>
 </body>
 </html>

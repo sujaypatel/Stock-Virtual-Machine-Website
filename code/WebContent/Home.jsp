@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Home Page</title>
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Lobster'
 	rel='stylesheet' type='text/css'>
+<title>Home Page</title>
 </head>
 <body id="home">
-	<span class="welcome">Stock Virtual Machine</span>
 	<div class="navbar">
+	    <span class="welcome">Stock Virtual Machine</span>
 		<ul>
 			<li><a id="homenav" href="Home.jsp"> HOME</a></li>
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
