@@ -1,11 +1,11 @@
 package databases;
 
 import java.io.IOException;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +43,6 @@ public class SecretServlet extends HttpServlet {
 			while (rs.next()) {
 				counter++;
 			}
-
 			if (counter > 0) {
 				return true;
 			}
@@ -52,34 +51,15 @@ public class SecretServlet extends HttpServlet {
 			ex.printStackTrace();
 			return false;
 		} finally {
-
-			if (rs != null) {
-				try {
-
-					rs.close();
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-			}
-
-			if (stmt != null) {
-				try {
-
-					stmt.close();
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-			}
-
 			if (c != null) {
 				try {
-
+					rs.close();
+					stmt.close();
 					c.close();
 				} catch (Exception ex) {
 					ex.printStackTrace();
 				}
 			}
-
 		}
 
 	}
@@ -93,7 +73,7 @@ public class SecretServlet extends HttpServlet {
 			boolean validUser = checkUserValid(userName, secret, answer);
 			if (validUser) {
 				request.getSession().setAttribute("userName", userName);
-				response.sendRedirect("UpdatePassword.jsp");
+				response.sendRedirect("RetrievePassword.jsp");
 			} else {
 				response.sendRedirect("InvalidSecret.jsp");
 			}

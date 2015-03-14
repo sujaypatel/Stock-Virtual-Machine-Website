@@ -122,6 +122,11 @@ a.fp {
 	color: #0B570C;
 	text-decoration: underline;
 }
+a.fp1 {
+	display: inline;
+	color: #0B570C;
+	text-decoration: underline;
+}
 
 .navbar ul li img {
 	position: absolute;

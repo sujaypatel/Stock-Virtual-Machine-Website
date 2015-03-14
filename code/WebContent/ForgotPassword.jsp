@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div class=FormDesign>
+		<a class="fp1" href="Login.jsp"> Back To Login</a>
 		<form action="SecretServlet" method="post" id="ForgetPassword-form">
 			<h4>
 				<label>SECRET QUESTION</label>

@@ -8,4 +8,20 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>databases.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SecretServlet</servlet-name>
+    <servlet-class>databases.SecretServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecretServlet</servlet-name>
+    <url-pattern>/SecretServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
