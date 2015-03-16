@@ -8,7 +8,7 @@
 </head>
 <body id="home">
 	<div class="navbar">
-	    <span class="welcome">Stock Virtual Machine</span>
+		<span class="welcome">Stock Virtual Machine</span>
 		<ul>
 			<li><a id="homenav" href="Home.jsp"> HOME</a></li>
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
@@ -21,19 +21,22 @@
 	<div class=FormDesign>
 		<h1>Welcome To Stock Virtual Machine</h1>
 		<fieldset>
-			<div>
+			<div id="move_right">
 				<h4>WELCOME</h4>
-				<p>Stock Virtual Machine web application will provide a learning
-					opportunity for new users to become experts in the Stock Market
-					with actual spend the money.</p>
-				<p>To use the application users has to Sign up. Once the user
-					register, the system take the user to Portfolio page. That is where
-					it would allow the user to buy, sell, and search stock. Also, the
-					virtual money will be add to user account so that they can use the
-					virtual money to invest in stocks.</p>
+				<p>Stock Virtual Machine web application will be providing a
+					learning opportunity for new users to become experts in the stock
+					market without spending actually money. To use the application, the
+					user has to sign up. Once the user registers, the system will take
+					the user to the Login page where the user will be prompt to enter
+					his/her username and password. The system will redirect the user to
+					the portfolio page where they can see all their stock investments.
+					Additionally, portfolio page will also allow users to buy, sell,
+					and search stocks with virtual money. The virtual money will be
+					added to the user's account once they sign up.</p>
 				<img src="images/NewHomePage.jpg" height="325" width="625" HSPACE=10>
 			</div>
 		</fieldset>
+
 	</div>
 </body>
 </html>
