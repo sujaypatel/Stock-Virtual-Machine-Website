@@ -7,10 +7,17 @@
       "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Righteous'
+	rel='stylesheet' type='text/css'>
 <title>Portfolio Page</title>
 </head>
-<body class="LoginBackGround-Image">
+<body>
+	<div class="navbar navbar-default">
+		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
+			class="logout" href="Login.jsp"> Logout </a>>
+	</div>
 	<%
 		String userVirtualBal = "";
 		String username = session.getAttribute("theName").toString();
@@ -47,65 +54,67 @@
 			}
 		}
 	%>
-	<div class=PortfolioDesign>
+	<center>
 		<h1>Portfolio</h1>
-		<fieldset>
+		<div id="move_right">
+			<h3>
+				Welcome,
+				<%=session.getAttribute("theName")%></h3>
+			<h4>
+				Virtual Balance: $
+				<%=userVirtualBal%>
+			</h4>
+		</div>
+		<br> <br>
+		<div id="move_right">
+			<TABLE class="table table-bordered table-striped">
+				<TR>
+					<TH COLSPAN="5" style="text-shadow: black;">List
+						of Owned Stocks</TH>
+				</TR>
+				<TR style="background-color: black; color: white;">
+					<TH align="center">Symbol</TH>
+					<TH align="center">High</TH>
+					<TH align="center">Low
+					<TH align="center">Close</TH>
+					<TH align="center">Quantity</TH>
+				</TR>
+				<TR ALIGN="CENTER">
+					<TD><h6>AAP</h6></TD>
+					<TD><h6>Advance Auto Parts Inc</h6></TD>
+					<TD><h6>119.60</h6></TD>
+					<TD><h6>117.80</h6></TD>
+					<TD><h6>119.40</h6></TD>
+				</TR>
+				<TR ALIGN="CENTER">
+					<TD><h6>AAT</h6></TD>
+					<TD><h6>American Assets Trust</h6></TD>
+					<TD><h6>119.60</h6></TD>
+					<TD><h6>117.80</h6></TD>
+					<TD><h6>119.40</h6></TD>
+				</TR>
+				<TR ALIGN="CENTER">
+					<TD><h6>YHOO</h6></TD>
+					<TD><h6>Yahoo</h6></TD>
+					<TD><h6>43.40</h6></TD>
+					<TD><h6>42.94</h6></TD>
+					<TD><h6>45.50</h6></TD>
+				</TR>
+			</TABLE>
+			<br>
 			<div>
-				<div style="float: right; padding-right: 15px">
-					<a href="Login.jsp" class='logoutButton'> Logout </a>
-				</div>
+				<a href="BuyStock.jsp" class="btn btn-info"> Buy Stocks </a> <a
+					href="SellStock.jsp" class="btn btn-danger"> Sell Stocks </a> <a
+					href="Search.jsp" class="btn btn-primary"> Search </a>
 			</div>
-			<div id="move_right">
-				<h2>
-					Welcome,
-					<%=session.getAttribute("theName")%></h2>
-				<label> Virtual Balance: $ <%=userVirtualBal%>
-				</label>
-			</div>
-			<br> <br>
-			<div id="move_right">
-				<TABLE class="table table-bordered table-striped">
-					<TR>
-						<TH COLSPAN="5" style="text-shadow: black;">List of Owned
-							Stocks</TH>
-					</TR>
-					<TR style="background-color: black; color: white;">
-						<TH align="center">Symbol</TH>
-						<TH align="center">High</TH>
-						<TH align="center">Low
-						<TH align="center">Close</TH>
-						<TH align="center">Quantity</TH>
-					</TR>
-					<TR ALIGN="CENTER">
-						<TD><h6>AAP</h6></TD>
-						<TD><h6>Advance Auto Parts Inc</h6></TD>
-						<TD><h6>119.60</h6></TD>
-						<TD><h6>117.80</h6></TD>
-						<TD><h6>119.40</h6></TD>
-					</TR>
-					<TR ALIGN="CENTER">
-						<TD><h6>AAT</h6></TD>
-						<TD><h6>American Assets Trust</h6></TD>
-						<TD><h6>119.60</h6></TD>
-						<TD><h6>117.80</h6></TD>
-						<TD><h6>119.40</h6></TD>
-					</TR>
-					<TR ALIGN="CENTER">
-						<TD><h6>YHOO</h6></TD>
-						<TD><h6>Yahoo</h6></TD>
-						<TD><h6>43.40</h6></TD>
-						<TD><h6>42.94</h6></TD>
-						<TD><h6>45.50</h6></TD>
-					</TR>
-				</TABLE>
-				<br>
-				<div>
-					<a href="BuyStock.jsp" class='buyButton'> Buy Stocks </a> 
-					<a href="SellStock.jsp" class='sellButton'> Sell Stocks </a> 
-					<a href="Search.jsp" class='searchButton'> Search </a>
-				</div>
-			</div>
-		</fieldset>
+		</div>
+	</center>
+	<br>
+	<div class="navbar navbar-default">
+		<center>
+			<div class="copyright">Copyright &copy; 2015 &middot; All
+				Rights Reserved &middot;</div>
+		</center>
 	</div>
 </body>
 </html>

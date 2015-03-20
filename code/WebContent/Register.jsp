@@ -3,7 +3,6 @@
 <html>
 <head>
 <title>Register</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Righteous'
@@ -38,7 +37,8 @@
 			}
 		}
 	%>
-	<h3 style="color: red;"><%=errorString%></h3>
+	<center>
+	<h3 style="color: red;"><%=errorString%></h3></center>
 	<div>
 		<form action="RegisterServlet" method="post">
 			<center>
@@ -46,25 +46,25 @@
 				<br>
 				<div>
 					<h4>
-						FIRST NAME: <input type="text" name="firstname">
+						FIRST NAME: <input type="text" name="firstname" required = "required">
 					</h4>
 					<h4>
-						LAST NAME: <input type="text" name="lastname">
+						LAST NAME: <input type="text" name="lastname" required = "required">
 					</h4>
 					<h4>
-						USERNAME: <input type="text" name="username">
+						USERNAME: <input type="text" name="username" required = "required">
 					</h4>
 					<h4>
-						PASSWORD: <input type="password" name="password">
+						PASSWORD: <input type="password" name="password" required = "required">
 					</h4>
 					<h4>
-						CONFIRM PASSWORD: <input type="password" name="confirmPassword">
+						CONFIRM PASSWORD: <input type="password" name="confirmPassword" required = "required">
 					</h4>
 					<h4>
-						EMAIL ADDRESS: <input name="email">
+						EMAIL ADDRESS: <input name="email" required = "required">
 					</h4>
 					<h4>
-						SECRET QUESTION <select name="secret">
+						SECRET QUESTION <select name="secret" required = "required">
 							<option value="What is your pet name">What is your pet's
 								name</option>
 							<option value="What is the color of your first car">What
@@ -78,7 +78,7 @@
 						</select>
 					</h4>
 					<h4>
-						ANSWER <input type="text" name="answer">
+						ANSWER <input type="text" name="answer" required = "required">
 					</h4>
 					<input type="submit" class="btn btn-success btn-lg"
 						value="REGISTER">

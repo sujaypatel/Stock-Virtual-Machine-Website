@@ -35,7 +35,8 @@
 			</a>
 		</center>
 	</div>
-	<div id="footer" class="navbar navbar-default">
+	<br>
+	<div  class="navbar navbar-default">
 		<center>
 			<div class="copyright">Copyright &copy; 2015 &middot; All
 				Rights Reserved &middot;</div>
