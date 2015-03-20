@@ -2,7 +2,6 @@
       "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Righteous'
@@ -30,13 +29,13 @@
 			<br>
 			<div id="move_right">
 				<h4>
-					USERNAME: <input type="text" name="un">
+					USERNAME: <input type="text" name="un" required = "required">
 				</h4>
 				<h4>
-					PASSWORD: <input type="password" name="pw">
+					PASSWORD: <input type="password" name="pw" required = "required">
 				</h4>
 				<div>
-					<input type="submit" class="btn btn-warning btn-lg btn-block"
+					<input type="submit" class="btn btn-info btn-lg btn-block"
 						value="SIGN IN" /> <a class="fp" href="ForgotPassword.jsp">Forgot
 						Password</a>
 				</div>

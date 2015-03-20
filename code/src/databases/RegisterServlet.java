@@ -114,7 +114,7 @@ public class RegisterServlet extends HttpServlet {
 		String answer = request.getParameter("answer");
 		String firstname = request.getParameter("firstname");
 		String lastname = request.getParameter("lastname");
-
+		
 		if (password.equals(confirmPassword)) {
 			if (!isUserExists(userName)) {
 				boolean success = createNewUser(userName, password, email,
@@ -123,6 +123,7 @@ public class RegisterServlet extends HttpServlet {
 					HttpSession session = request.getSession(true);
 					session.setAttribute("theName", userName);
 					response.sendRedirect("Portfolio.jsp");
+					request.getSession().removeAttribute("reg_error");
 				}
 			} else {
 				request.getSession().setAttribute("reg_error", "1");
