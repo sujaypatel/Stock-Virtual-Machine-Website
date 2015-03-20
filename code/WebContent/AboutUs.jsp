@@ -1,25 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"    
+      "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
-<link href='http://fonts.googleapis.com/css?family=Lobster'
+<link href='http://fonts.googleapis.com/css?family=Righteous'
 	rel='stylesheet' type='text/css'>
 <title>About Us Page</title>
 </head>
-<body id="about">
-	<div class="navbar">
-		<span class="welcome">Stock Virtual Machine</span>
-		<ul>
-			<li><a id="homenav" href="Home.jsp"> <span>HOME </span></a></li>
-			<li><a id="registernav" href="Register.jsp"> <span>
-						SIGN UP </span></a></li>
-			<li><a id="loginnav" href="Login.jsp"> <span> LOGIN </span></a></li>
-			<li><a id="helpnav" href="Help.jsp"><span> HELP </span></a></li>
+<body>
+	<div class="navbar navbar-default">
+		<span class="welcome"><a class="title" href="Home.jsp">Stock
+				Virtual Machine</a></span>
+		<ul class="nav navbar-nav">
+			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
+			<li><a id="loginnav" href="Login.jsp"> LOGIN</a></li>
+			<li><a id="helpnav" href="Help.jsp"> HELP</a></li>
 			<li><a id="aboutnav" href="AboutUs.jsp"><span> ABOUT
 						US </span></a></li>
 		</ul>
 	</div>
-	<form class=FormDesign>
+	<div class=FormDesign>
 		<div>
 			<h1>
 				<b>About Us</b>
@@ -44,9 +46,13 @@
 			<h4>University of Illinois at Chicago, Chicago IL</h4>
 			1200 West Harrison Street, <br> Chicago, IL 60607 <br>
 			Phone: (224)-538-1098
-
-			</p>
 		</fieldset>
-	</form>
+	</div>
+	<div id="footer" class="navbar navbar-default">
+		<center>
+			<div class="copyright">Copyright &copy; 2015 &middot; All
+				Rights Reserved &middot;</div>
+		</center>
+	</div>
 </body>
 </html>
