@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"    
+      "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Register</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
-<link href='http://fonts.googleapis.com/css?family=Lobster'
+<link href='http://fonts.googleapis.com/css?family=Righteous'
 	rel='stylesheet' type='text/css'>
 </head>
 <body id="register">
-	<div class="navbar">
-		<span class="welcome">Stock Virtual Machine</span>
-		<ul>
-			<li><a id="homenav" href="Home.jsp"> HOME</a></li>
+	<div class="navbar navbar-default">
+		<span class="welcome"><a class="title" href="Home.jsp">Stock
+				Virtual Machine</a></span>
+		<ul class="nav navbar-nav">
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
 			<li><a id="loginnav" href="Login.jsp"> LOGIN</a></li>
 			<li><a id="helpnav" href="Help.jsp"> HELP</a></li>
@@ -37,73 +40,58 @@
 	%>
 	<h3 style="color: red;"><%=errorString%></h3>
 	<div>
-		<form action="RegisterServlet" method="post" class=FormDesign>
-			<h1>
-				<b>Create an Account</b>
-			</h1>
-			<fieldset>
+		<form action="RegisterServlet" method="post">
+			<center>
+				<h1>Create an Account</h1>
+				<br>
 				<div>
-					<h4>REGISTER NOW</h4>
-					<p>The user will get the full experience of buying and selling
-						stock on the web without having to invest actual currency.</p>
-					<div id="move_right">
-						<div>
-							<label>FIRST NAME: </label> <input type="text" name="firstname"
-								required="required">
-						</div>
-						<br>
-						<div>
-							<label>LAST NAME: </label> <input type="text" name="lastname"
-								required="required">
-						</div>
-						<br>
-						<div>
-							<label>USERNAME: </label> <input type="text" name="username"
-								required="required">
-						</div>
-						<br>
-						<div>
-							<label>PASSWORD: </label> <input type="password" name="password"
-								required="required">
-						</div>
-						<br>
-						<div>
-							<label>CONFIRM PASSWORD: </label> <input type="password"
-								name="confirmPassword" required="required">
-						</div>
-						<br>
-						<div>
-							<label>EMAIL ADDRESS: </label> <input type="email" name="email"
-								required="required">
-						</div>
-						<br>
-						<div>
-							<label>SECRET QUESTION</label> <select name="secret">
-								<option value="What is your pet name">What is your
-									pet's name</option>
-								<option value="What is the color of your first car">What
-									is the color of your first car</option>
-								<option value="What is your mother maiden name">What is
-									your mother's maiden name</option>
-								<option value="What is your favorite grad subject">What
-									is your favorite grad subject</option>
-								<option value="What is your crush name">What is your
-									crush's name</option>
-							</select>
-						</div>
-						<br>
-						<div>
-							<label for="answer">ANSWER</label> <input type="text"
-								name="answer">
-						</div>
-						<br>
-						<div>
-							<input type="submit" class='button' value="REGISTER">
-						</div>
-					</div>
+					<h4>
+						FIRST NAME: <input type="text" name="firstname">
+					</h4>
+					<h4>
+						LAST NAME: <input type="text" name="lastname">
+					</h4>
+					<h4>
+						USERNAME: <input type="text" name="username">
+					</h4>
+					<h4>
+						PASSWORD: <input type="password" name="password">
+					</h4>
+					<h4>
+						CONFIRM PASSWORD: <input type="password" name="confirmPassword">
+					</h4>
+					<h4>
+						EMAIL ADDRESS: <input name="email">
+					</h4>
+					<h4>
+						SECRET QUESTION <select name="secret">
+							<option value="What is your pet name">What is your pet's
+								name</option>
+							<option value="What is the color of your first car">What
+								is the color of your first car</option>
+							<option value="What is your mother maiden name">What is
+								your mother's maiden name</option>
+							<option value="What is your favorite grad subject">What
+								is your favorite grad subject</option>
+							<option value="What is your crush name">What is your
+								crush's name</option>
+						</select>
+					</h4>
+					<h4>
+						ANSWER <input type="text" name="answer">
+					</h4>
+					<input type="submit" class="btn btn-success btn-lg"
+						value="REGISTER">
 				</div>
-			</fieldset>
+			</center>
 		</form>
+	</div>
+	<br>
+	<div class="navbar navbar-default">
+		<center>
+			<div class="copyright">Copyright &copy; 2015 &middot; All
+				Rights Reserved &middot;</div>
+		</center>
 	</div>
 </body>
 </html>
