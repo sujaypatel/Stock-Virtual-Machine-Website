@@ -2,7 +2,6 @@
       "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Righteous'
@@ -30,13 +29,13 @@
 			<img src="images/buy-sell-stocks.jpg" height="200" width="200"
 				HSPACE=10> <br> <a class="btn btn-primary"
 				href="Register.jsp"> <span> SIGN UP NOW</span></a> <br> <br>
-			<a class="member" href="Login.jsp"> <span> Already An
-					Member </span>
+			<a class="member" href="Login.jsp"> <span> Already Have
+					Account </span>
 			</a>
 		</center>
 	</div>
 	<br>
-	<div  class="navbar navbar-default">
+	<div class="navbar navbar-default">
 		<center>
 			<div class="copyright">Copyright &copy; 2015 &middot; All
 				Rights Reserved &middot;</div>

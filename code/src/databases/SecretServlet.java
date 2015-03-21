@@ -22,7 +22,7 @@ public class SecretServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 	}
 
-	private boolean checkUserValid(String userName, String secret, String answer) {
+	private boolean checkUserValid(String userName, String email) {
 		Connection c = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -36,9 +36,7 @@ public class SecretServlet extends HttpServlet {
 			rs = stmt
 					.executeQuery("select * from public.\"Login\" where username='"
 							+ userName
-							+ "' and secret = '"
-							+ secret
-							+ "' and answer ='" + answer + "';");
+							+ "' and email ='" + email + "';");
 			int counter = 0;
 			while (rs.next()) {
 				counter++;
@@ -67,12 +65,12 @@ public class SecretServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String userName = request.getParameter("userName");
-		String secret = request.getParameter("secret");
-		String answer = request.getParameter("answer");
-		if (!userName.equalsIgnoreCase("") && (!answer.equalsIgnoreCase(""))) {
-			boolean validUser = checkUserValid(userName, secret, answer);
+		String email = request.getParameter("email");
+		if (!userName.equalsIgnoreCase("")) {
+			boolean validUser = checkUserValid(userName, email);
 			if (validUser) {
 				request.getSession().setAttribute("userName", userName);
+				request.getSession().setAttribute("email", email);
 				response.sendRedirect("RetrievePassword.jsp");
 			} else {
 				response.sendRedirect("InvalidSecret.jsp");

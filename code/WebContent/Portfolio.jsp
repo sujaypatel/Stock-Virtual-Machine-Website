@@ -16,7 +16,7 @@
 <body>
 	<div class="navbar navbar-default">
 		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
-			class="logout" href="Login.jsp"> Logout </a>>
+			class="logout" href="Logout.jsp"> Logout </a>>
 	</div>
 	<%
 		String userVirtualBal = "";

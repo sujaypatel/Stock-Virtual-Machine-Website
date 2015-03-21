@@ -1,46 +1,44 @@
-<!DOCTYPE html PUBLIC>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"    
+      "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Forgot Password</title>
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Righteous'
+	rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class=FormDesign>
-		<a class="fp1" href="Login.jsp"> Back To Login</a>
+	<div class="navbar navbar-default">
+		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
+			class="logout" href="Login.jsp"> Back To Login </a>>
+	</div>
+	<center>
 		<form action="SecretServlet" method="post" id="ForgetPassword-form">
-			<h4>
-				<label>SECRET QUESTION</label>
-			</h4>
+			<h2>Recovery Password</h2>
+			<br>
 			<div>
-				Username: <input type="text" id="userName" name="userName"
-					placeholder="">
+				USERNAME: <input type="text" id="userName" name="userName"
+					placeholder="Username" required="required">
 			</div>
 			<br>
 			<div>
-				Secret question: <select name="secret">
-					<option value="What is your pet name">What is your pet's
-						name</option>
-					<option value="What is the color of your first car">What
-						is the color of your first car</option>
-					<option value="What is your mother maiden name">What is
-						your mother's maiden name</option>
-					<option value="What is your favorite grad subject">What is
-						your favorite grad subject</option>
-					<option value="What is your crush name">What is your
-						crush's name</option>
-				</select>
+				EMAIL ADDRESS: <input type="text" id="email" name="email"
+					placeholder="Someone@gmail.com" required="required">
 			</div>
 			<br>
 			<div>
-				Answer: <input type="text" id="answer" name="answer" placeholder=""
-					value="">
+				<input type="submit" class="btn btn-info" value="SUBMIT">
 			</div>
-			<br>
-			<div>
-				<input type="submit" class="button" value="SUBMIT">
-			</div>
-			<br>
+			<br> <img src="images/Password-Recovery.jpg" height="200"
+				width="300" HSPACE=10> <br> <br>
 		</form>
+	</center>
+	<div id="footer" class="navbar navbar-default">
+		<center>
+			<div class="copyright">Copyright &copy; 2015 &middot; All
+				Rights Reserved &middot;</div>
+		</center>
 	</div>
 </body>
 </html>
