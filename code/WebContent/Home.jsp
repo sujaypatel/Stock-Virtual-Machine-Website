@@ -25,7 +25,7 @@
 			<br>
 			<h1>Welcome To Stock Virtual Machine</h1>
 			<br>
-			<h4>Place To Play With Stock Without Investing Actual Money!</h4>
+			<h4>Place To Play With Stocks!</h4>
 			<img src="images/buy-sell-stocks.jpg" height="200" width="200"
 				HSPACE=10> <br> <a class="btn btn-primary"
 				href="Register.jsp"> <span> SIGN UP NOW</span></a> <br> <br>

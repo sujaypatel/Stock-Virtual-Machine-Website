@@ -1,5 +1,30 @@
 @CHARSET "ISO-8859-1";
 
+<<<<<<< HEAD
+.LoginBackGround-Image {
+	background-image: url(../images/StockMarket.jpg);
+}
+
+.FormDesign {
+	background-color: rgba(0,0,0);
+	max-width: 700px;
+	padding: 10px 30px 30px 30px;
+	margin: 30px auto 0 auto;
+	font-size: 105%;
+	font-family: Georgia;
+}
+
+.PortfolioDesign {
+	background-color: white;
+	max-width: 700px;
+	padding: 10px 30px 30px 30px;
+	margin: 30px auto 0 auto;
+	font-size: 105%;
+	font-family: Georgia;
+}
+
+=======
+>>>>>>> 123fc0ab2b1aab45f6fe6542f7008d26805e2188
 ul {
 	list-style-type: none;
 	overflow: hidden;
