@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="navbar navbar-default">
-		<span class="welcome"><a class="title" href="Home.jsp">Stock
+		<span class="welcome"><a class="title" href="Help.jsp">Stock
 				Virtual Machine</a></span>
 		<ul class="nav navbar-nav">
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
