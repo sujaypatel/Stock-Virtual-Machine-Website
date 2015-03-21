@@ -29,20 +29,23 @@
 			<br>
 			<div id="move_right">
 				<h4>
-					USERNAME: <input type="text" name="un" required = "required">
+					USERNAME: <input type="text" name="un" required="required">
 				</h4>
 				<h4>
-					PASSWORD: <input type="password" name="pw" required = "required">
+					PASSWORD: <input type="password" name="pw" required="required">
 				</h4>
 				<div>
 					<input type="submit" class="btn btn-info btn-lg btn-block"
 						value="SIGN IN" /> <a class="fp" href="ForgotPassword.jsp">Forgot
 						Password</a>
 				</div>
+				<br> <img src="images/Login.jpg" height="150" width="175"
+					HSPACE=10>
 			</div>
 		</center>
 	</form>
-	<div id="footer" class="navbar navbar-default">
+	<br>
+	<div class="navbar navbar-default">
 		<center>
 			<div class="copyright">Copyright &copy; 2015 &middot; All
 				Rights Reserved &middot;</div>

@@ -24,7 +24,9 @@
 		<h1>You Have Successfully Logged out!</h1>
 		<br>
 		<h4>Do you want to Login Back?</h4>
-		<br> <a class="btn btn-success" href="Login.jsp"> Login </a>
+		<br> <a class="btn btn-success" href="Login.jsp"> LOGIN </a><br>
+		<br> <img src="images/be-back-soon.jpg" height="200" width="200"
+			HSPACE=10>
 	</center>
 	<div id="footer" class="navbar navbar-default">
 		<center>
