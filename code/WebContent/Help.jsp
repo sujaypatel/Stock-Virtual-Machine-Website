@@ -25,6 +25,7 @@
 		<h1>Help Menu</h1>
 		<fieldset>
 			<br>
+			 <p> General info </p>
 			<p>1.What is a share?</p>
 			<p id="p1">In the US shares are referred to as stocks. A share is
 				a single unit of ownership of a company.</p>
