@@ -14,8 +14,6 @@ public class ConnectionManager {
 				con = DriverManager.getConnection(
 						"jdbc:postgresql://localhost:5432/SVM", "postgres",
 						"cs422");
-				if(con != null)
-				   System.out.print("Hello");
 			}
 			catch (SQLException ex) {
 				ex.printStackTrace();
