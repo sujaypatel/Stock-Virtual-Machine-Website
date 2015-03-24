@@ -1,21 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"    
+      "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Righteous'
 	rel='stylesheet' type='text/css'>
 <title>Help Page</title>
-<link rel="stylesheet" href="css/main.css">
-<link href='http://fonts.googleapis.com/css?family=Lobster'
-	rel='stylesheet' type='text/css'>
 </head>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <body>
 	<div class="navbar navbar-default">
-		<span class="welcome"><a class="title" href="Home.jsp">Stock
+		<span class="welcome"><a class="title" href="Help.jsp">Stock
 				Virtual Machine</a></span>
 		<ul class="nav navbar-nav">
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
@@ -25,10 +20,12 @@
 						US </span></a></li>
 		</ul>
 	</div>
+	
 	<div class=FormDesign>
 		<h1>Help Menu</h1>
 		<fieldset>
 			<br>
+			 <p> General info </p>
 			<p>1.What is a share?</p>
 			<p id="p1">In the US shares are referred to as stocks. A share is
 				a single unit of ownership of a company.</p>
