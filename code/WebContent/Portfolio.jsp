@@ -1,7 +1,13 @@
+<%@page import="java.util.LinkedHashMap"%>
+<%@page import="java.util.concurrent.ConcurrentHashMap"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.ArrayList"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"    
       "http://www.w3.org/TR/html4/loose.dtd">
@@ -69,8 +75,8 @@
 		<div id="move_right">
 			<TABLE class="table table-bordered table-striped">
 				<TR>
-					<TH COLSPAN="5" style="text-shadow: black;">List
-						of Owned Stocks</TH>
+					<TH COLSPAN="5" style="text-shadow: black;">List of Owned
+						Stocks</TH>
 				</TR>
 				<TR style="background-color: black; color: white;">
 					<TH align="center">Symbol</TH>
@@ -99,7 +105,7 @@
 					<TD><h6>43.40</h6></TD>
 					<TD><h6>42.94</h6></TD>
 					<TD><h6>45.50</h6></TD>
-				</TR>
+				</TR> 
 			</TABLE>
 			<br>
 			<div>

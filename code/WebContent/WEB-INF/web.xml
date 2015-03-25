@@ -24,4 +24,12 @@
     <servlet-name>SecretServlet</servlet-name>
     <url-pattern>/SecretServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>PurchaseStocks</servlet-name>
+    <servlet-class>databases.PurchaseStocks</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PurchaseStocks</servlet-name>
+    <url-pattern>/PurchaseStocks</url-pattern>
+  </servlet-mapping>
 </web-app>
