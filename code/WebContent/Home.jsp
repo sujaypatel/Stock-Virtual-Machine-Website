@@ -29,7 +29,7 @@
 			<img src="images/buy-sell-stocks.jpg" height="200" width="200"
 				HSPACE=10> <br> <a class="btn btn-primary"
 				href="Register.jsp"> <span> SIGN UP NOW</span></a> <br> <br>
-			<a class="member" href="Login.jsp"> <span> Already Have
+			<a class="member" href="Login.jsp"> <span> Already Have An
 					Account </span>
 			</a>
 		</center>
