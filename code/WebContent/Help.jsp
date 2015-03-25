@@ -53,8 +53,6 @@ Always read the terms and conditions carefully of any online stockbroker you wou
 			    <p id = "p1">They are  payments made to shareholders out of the money a company makes. For example, if you have 100 shares in Glaxosmithkline and they pay a yearly dividend of £1.00, you would receive £100.00 a year from Glaxosmithkline in dividends (100 shares x £1.00 dividend). </p>
 			  <p>7.Why do companies issue shares?</p>
 			   <p id = "p1"> Stock exchanges allow companies issue shares to the public in exchange for cash.The amount of cash each company gets from issuing shares depends upon how many shares they issue and how much each of their shares are worth. </p>
-			 <p>8.How rich can I get from investing in stock market?</p>
-			  <p id = "p1"> Very rich but it can also make you </p>
 			 
 	</fieldset>
 	<fieldset>
