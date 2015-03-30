@@ -8,10 +8,10 @@
 	rel='stylesheet' type='text/css'>
 <title>Home Page</title>
 </head>
-<body>
+<body id="home">
 	<div class="navbar navbar-default">
-		<span class="welcome"><a class="title" href="Home.jsp">Stock
-				Virtual Machine</a></span>
+		<span class="welcome"><a class="title" id="homenav"
+			href="Home.jsp">Stock Virtual Machine</a></span>
 		<ul class="nav navbar-nav">
 			<li><a id="registernav" href="Register.jsp"> SIGN UP</a></li>
 			<li><a id="loginnav" href="Login.jsp"> LOGIN</a></li>
@@ -22,7 +22,6 @@
 	</div>
 	<div>
 		<center>
-			<br>
 			<h1>Welcome To Stock Virtual Machine</h1>
 			<br>
 			<h4>Place To Play With Stocks!</h4>

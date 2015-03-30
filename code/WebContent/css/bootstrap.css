@@ -4994,10 +4994,10 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 }
 
 .breadcrumb {
-	padding: 8px 15px;
+	padding: 8px 25px;
 	margin-bottom: 21px;
 	list-style: none;
-	background-color: #ecf0f1;
+	background-color: #2c3e50;
 	border-radius: 4px;
 }
 

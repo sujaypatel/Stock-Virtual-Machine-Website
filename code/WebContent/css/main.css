@@ -1,5 +1,13 @@
 @CHARSET "ISO-8859-1";
 
+.FormDesign {
+	max-width: 750px;
+	padding: 10px 30px 30px 30px;
+	margin: 30px auto 0 auto;
+	font-size: 105%;
+	font-family: Georgia;
+}
+
 ul {
 	list-style-type: none;
 	overflow: hidden;
@@ -140,6 +148,10 @@ th, td {
 	display: inline-block;
 	padding-right: 10px;
 	padding-left: 20px
+}
+
+#pos_of_breadcrumb {
+	padding-right: 93%;
 }
 
 label {
