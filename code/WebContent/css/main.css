@@ -1,5 +1,18 @@
 @CHARSET "ISO-8859-1";
 
+/*Login Page - Icons for UserName and Password */
+.Input_Icons { position: relative; }
+.Input_Icons .fa {
+	color: #800040;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.Input_Icons input, 
+.Input_Icons textarea {
+	padding-left: 30px;
+}
+
 .FormDesign {
 	max-width: 750px;
 	padding: 10px 30px 30px 30px;

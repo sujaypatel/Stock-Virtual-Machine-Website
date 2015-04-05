@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Righteous'
 	rel='stylesheet' type='text/css'>
+<title>Sell Stock Page</title>
 </head>
 <body>
 	<div class="navbar navbar-default">
@@ -51,6 +52,17 @@
 					ex.printStackTrace();
 				}
 			}
+		}
+	%>
+	<%
+		String errorMsg = "";
+		if (session.getAttribute("stockError") != null) {
+			errorMsg = session.getAttribute("stockError").toString();
+	%>
+	<div align="center">
+		<label style="color: red;"><font size="5"><%=errorMsg%></font></label>
+	</div>
+	<%
 		}
 	%>
 	<center>
@@ -110,17 +122,6 @@
 				<br>
 			</div>
 		</form>
-		<%
-			String errorMsg = "";
-			if (session.getAttribute("stockError") != null) {
-				errorMsg = session.getAttribute("stockError").toString();
-		%>
-		<div align="center">
-			<label style="color: red;"><font size="5"><%=errorMsg%></font></label>
-		</div>
-		<%
-			}
-		%>
 	</center>
 	<div id="footer" class="navbar navbar-default">
 		<center>

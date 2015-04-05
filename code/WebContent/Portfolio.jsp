@@ -97,7 +97,7 @@
 				completePortfolioData.put(symbols.get(i), data);
 			}
 			val = val.substring(0, val.length() - 2);
-			System.out.println("*** Val: " + val);
+			//System.out.println("*** Val: " + val);
 			folios.put(symbols.get(i), val);
 		}
 		return folios;
@@ -207,22 +207,22 @@
 					Iterator it1 = userPortfolios.entrySet().iterator();
 					System.out.println("*** Before While : " + userStockSymbols);
 					for (int i = 0; i < userStockSymbols.size(); i++) {
-						out.println("<tr align=\"center\"><td style=\"background-color: #B8B8E6;\">"
+						out.println("<tr align=\"center\"><td style=\"background-color: #6776AE;\">"
 								+ "<font color=\"white\">"
 								+ userStockSymbols.get(i)
 								+ "</font></td>");
 						SymbolData data = completePortfolioData.get(userStockSymbols
 								.get(i));
-						out.println("<td style = \"background-color: #B8B8E6;\">"
+						out.println("<td style = \"background-color: #6776AE;\">"
 								+ "<font color=\"white\">" + data.getHigh()
 								+ "</font></td>");
-						out.println("<td style = \"background-color: #B8B8E6;\">"
+						out.println("<td style = \"background-color: #6776AE;\">"
 								+ "<font color=\"white\">" + data.getLow()
 								+ "</font></td>");
-						out.println("<td style = \"background-color: #B8B8E6;\">"
+						out.println("<td style = \"background-color: #6776AE;\">"
 								+ "<font color=\"white\">" + data.getClose()
 								+ "</font></td>");
-						out.println("<td style = \"background-color: #B8B8E6;\">"
+						out.println("<td style = \"background-color: #6776AE;\">"
 								+ "<font color=\"white\">"
 								+ stockQuanity.get(userStockSymbols.get(i))
 								+ "</font></td>");

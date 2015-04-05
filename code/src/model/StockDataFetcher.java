@@ -52,8 +52,8 @@ public class StockDataFetcher {
 			int counter = 0;
 			while ((line = urlBufferReader.readLine()) != null) {
 				String[] value = line.split(cvsSplitBy);
-				System.out.println("*** value[0]: " + value[0]);
-				System.out.println("*** value[1]: " + value[1]);
+				// System.out.println("*** value[0]: " + value[0]);
+				// System.out.println("*** value[1]: " + value[1]);
 				if (counter != 0)
 					retVal.put(value[0], value[1] + "," + value[2] + ","
 							+ value[3] + "," + value[4] + "," + value[5] + ","

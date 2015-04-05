@@ -40,8 +40,6 @@ public class SellStocks extends HttpServlet {
 			if (null != quote && quote.getLength() > 0) {
 				System.out.println("*** quote: " + quote.getLength());
 
-				Element data = (Element) quote.item(0);
-				String lastVal = data.getFirstChild().getNodeName();
 				Element item = (Element) quote.item(0).getChildNodes().item(3);
 				String retValString = item.getTextContent();
 				System.out.println("*** lastVal: " + item.getTextContent());
@@ -102,14 +100,14 @@ public class SellStocks extends HttpServlet {
 					// Error quantity value. Return to error Page
 				} else {
 					System.out.println("INSIDE ELSE");
-					query = "update public\"UserStockData\" set quantity="
+					query = "update public.\"UserStockData\" set quantity="
 							+ updateQuantity + " where username='" + username
 							+ "' and stocksymbol='" + selectedStock + "';";
 				}
 
 				System.out.println("Query String UPDATE RECORD: " + query);
 
-				int result = stmt.executeUpdate(query.toString());
+				stmt.executeUpdate(query.toString());
 
 			} catch (Exception ex) {
 				ex.printStackTrace();
@@ -147,7 +145,8 @@ public class SellStocks extends HttpServlet {
 						+ "';";
 				System.out.println("Query String: " + query);
 
-				int result = stmt.executeUpdate(query.toString());
+				stmt.executeUpdate(query.toString());
+		
 				return 0;
 			}
 

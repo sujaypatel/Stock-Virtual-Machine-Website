@@ -35,8 +35,7 @@ public class SecretServlet extends HttpServlet {
 			stmt = c.createStatement();
 			rs = stmt
 					.executeQuery("select * from public.\"Login\" where username='"
-							+ userName
-							+ "' and email ='" + email + "';");
+							+ userName + "' and email ='" + email + "';");
 			int counter = 0;
 			while (rs.next()) {
 				counter++;

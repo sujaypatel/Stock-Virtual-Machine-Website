@@ -38,33 +38,40 @@
 		}
 	%>
 	<center>
-	<h3 style="color: red;"><%=errorString%></h3></center>
+		<h3 style="color: red;"><%=errorString%></h3>
+	</center>
 	<div>
 		<form action="RegisterServlet" method="post">
 			<center>
 				<h1>Create an Account</h1>
 				<br>
-				<div>
+				<div class="Input_Icons">
 					<h4>
-						FIRST NAME: <input type="text" name="firstname" required = "required">
+						<input type="text" name="firstname" placeholder="First Name"
+							required="required">
 					</h4>
 					<h4>
-						LAST NAME: <input type="text" name="lastname" required = "required">
+						<input type="text" name="lastname" placeholder="Last Name"
+							required="required">
 					</h4>
 					<h4>
-						USERNAME: <input type="text" name="username" required = "required">
+						<i class="fa fa-user"></i> <input type="text" name="username" placeholder="Username"
+							required="required">
 					</h4>
 					<h4>
-						PASSWORD: <input type="password" name="password" required = "required">
+						<i class="fa fa-lock"></i> <input type="password" name="password" placeholder="Password"
+							required="required">
 					</h4>
 					<h4>
-						CONFIRM PASSWORD: <input type="password" name="confirmPassword" required = "required">
+						<input type="password" name="confirmPassword"
+							placeholder="Confirm Password" required="required">
 					</h4>
 					<h4>
-						EMAIL ADDRESS: <input name="email" required = "required">
+						<input name="email" placeholder="Email Address"
+							required="required">
 					</h4>
 					<h4>
-						SECRET QUESTION <select name="secret" required = "required">
+						<select name="secret" required="required">
 							<option value="What is your pet name">What is your pet's
 								name</option>
 							<option value="What is the color of your first car">What
@@ -78,7 +85,8 @@
 						</select>
 					</h4>
 					<h4>
-						ANSWER <input type="text" name="answer" required = "required">
+						<input type="text" name="answer" placeholder="Answer"
+							required="required">
 					</h4>
 					<input type="submit" class="btn btn-success btn-lg"
 						value="REGISTER">
