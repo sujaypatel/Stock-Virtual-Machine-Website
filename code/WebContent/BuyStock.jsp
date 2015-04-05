@@ -65,18 +65,18 @@
 					Select a Company: <select id="StockSymbol" name="StockSymbol">
 						<%
 							Connection c = null;
-							Statement stmt = null;
-							ResultSet rs = null;
-							try {
-								String userId = session.getAttribute("theName").toString();
-								System.out.println("*** username: " + userId);
-								Class.forName("org.postgresql.Driver");
-								c = DriverManager.getConnection(
-										"jdbc:postgresql://localhost:5432/SVM", "postgres",
-										"cs422");
-								System.out.println("Opened Database successfully");
-								stmt = c.createStatement();
-								String query = "select s.cname,s.symbol from public.\"Stock\" s";
+											Statement stmt = null;
+											ResultSet rs = null;
+											try {
+												String userId = session.getAttribute("theName").toString();
+												System.out.println("*** username: " + userId);
+												Class.forName("org.postgresql.Driver");
+												c = DriverManager.getConnection(
+														"jdbc:postgresql://localhost:5432/SVM", "postgres",
+														"cs422");
+												System.out.println("Opened Database successfully");
+												stmt = c.createStatement();
+												String query = "select s.cname,s.symbol from public.\"Stock\" s";
 								rs = stmt.executeQuery(query);
 								while (rs.next()) {
 						%>

@@ -33,7 +33,8 @@
 					.println("Database successfully - User Login  Redirecting to Portfolio");
 			stmt1 = c1.createStatement();
 			rs1 = stmt1
-					.executeQuery("select virtualbalance from public.\"Login\" where username='" + username + "';");
+					.executeQuery("select virtualbalance from public.\"Login\" where username='"
+							+ username + "';");
 			if (rs1.next()) {
 				userVirtualBal = rs1.getString(1);
 				System.out.println("Virtual Balance: $" + rs1.getString(1));
@@ -58,16 +59,16 @@
 			Virtual Balance: $
 			<%=userVirtualBal%>
 		</h3>
-		<form ACTION="PurchaseStocks" method="post">
+		<form ACTION="SellStocks" method="post">
 			<div id="move_right">
 				<h4>
 					Select a Company: <select id="StockSymbol" name="StockSymbol">
 						<%
-						Connection c = null;
-						Statement stmt = null;
-						ResultSet rs = null;
+							Connection c = null;
+							Statement stmt = null;
+							ResultSet rs = null;
 
-						try {
+							try {
 								String userId = session.getAttribute("theName").toString();
 								System.out.println("*** username: " + userId);
 								Class.forName("org.postgresql.Driver");
@@ -76,28 +77,28 @@
 										"cs422");
 								System.out.println("Opened Database successfully");
 								stmt = c.createStatement();
-								String query = "select s.name,s.symbol from public.\"StockData\" s, svm.\"UserStockData\" us where us.username='" + userId
-										+ "' and us.stocksymbol=s.symbol;";
+								String query = "select s.cname,s.symbol from public.\"Stock\" s, public.\"UserStockData\" us where us.username='"
+										+ userId + "' and us.stocksymbol=s.symbol;";
 								rs = stmt.executeQuery(query);
 								while (rs.next()) {
-					%>
-					<option value="<%=rs.getString(2)%>"><%=rs.getString(1)%></option>
-					<%
-						}
-						}catch (Exception ex) {
-							ex.printStackTrace();
-						} finally {
-							if (c != null) {
-								try {
-									rs.close();
-									stmt.close();
-									c.close();
-								} catch (Exception ex) {
-									ex.printStackTrace();
+						%>
+						<option value="<%=rs.getString(2)%>"><%=rs.getString(1)%></option>
+						<%
+							}
+							} catch (Exception ex) {
+								ex.printStackTrace();
+							} finally {
+								if (c != null) {
+									try {
+										rs.close();
+										stmt.close();
+										c.close();
+									} catch (Exception ex) {
+										ex.printStackTrace();
+									}
 								}
 							}
-						}
-					%>
+						%>
 					</select>
 				</h4>
 
@@ -105,8 +106,8 @@
 					Selling Quantity: <input type="text" size="3" name="quantity"
 						required="required">
 				</h4>
-				<input id="Sell" class="btn btn-danger" type="submit"
-					value="Sell"> <br> 
+				<input id="Sell" class="btn btn-danger" type="submit" value="Sell">
+				<br>
 			</div>
 		</form>
 		<%

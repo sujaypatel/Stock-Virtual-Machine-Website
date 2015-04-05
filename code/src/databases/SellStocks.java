@@ -1,4 +1,5 @@
 package databases;
+
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URL;
@@ -23,25 +24,13 @@ import org.xml.sax.InputSource;
 /**
  * Servlet implementation class SellStocks
  */
-@WebServlet("/SellStocks")
 public class SellStocks extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public SellStocks() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
 	private String getTodayQuote(String symbol) {
 		try {
-			String url = "http://dev.markitondemand.com/Api/Quote?symbol=" + symbol;
+			String url = "http://dev.markitondemand.com/Api/Quote?symbol="
+					+ symbol;
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			Document dom = db.parse(new InputSource(new URL(url).openStream()));
@@ -70,10 +59,13 @@ public class SellStocks extends HttpServlet {
 		try {
 
 			Class.forName("org.postgresql.Driver");
-			Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SVM", "postgres", "cs422");
+			Connection c = DriverManager
+					.getConnection("jdbc:postgresql://localhost:5432/SVM",
+							"postgres", "cs422");
 			System.out.println("Opened Database successfully");
 			Statement stmt = c.createStatement();
-			String query = "select quantity from public.\"UserStockData\" where stocksymbol='" + selectedStock + "' and username='" + username + "';";
+			String query = "select quantity from public.\"UserStockData\" where stocksymbol='"
+					+ selectedStock + "' and username='" + username + "';";
 			ResultSet rs = stmt.executeQuery(query);
 			if (rs.next()) {
 				totalQuantity = rs.getInt(1);
@@ -85,25 +77,34 @@ public class SellStocks extends HttpServlet {
 		return totalQuantity;
 	}
 
-	private void updateRecord(String username, String selectedStock, String quantity) {
+	private void updateRecord(String username, String selectedStock,
+			String quantity) {
 		int totalStockQuantity = getStockQuantity(selectedStock, username);
 		if (totalStockQuantity != -1) {
 			try {
-				int updateQuantity = totalStockQuantity - (Integer.parseInt(quantity));
+				int updateQuantity = totalStockQuantity
+						- (Integer.parseInt(quantity));
 				Class.forName("org.postgresql.Driver");
-				Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SVM", "postgres", "cs422");
+				Connection c = DriverManager.getConnection(
+						"jdbc:postgresql://localhost:5432/SVM", "postgres",
+						"cs422");
 				System.out.println("Opened Database successfully");
 				Statement stmt = c.createStatement();
 				String query = "";
 				if (updateQuantity == 0) {
-					query = "delete from public.\"UserStockData\" where username='" + username + "' and stocksymbol='" + selectedStock + "';";
+					query = "delete from public.\"UserStockData\" where username='"
+							+ username
+							+ "' and stocksymbol='"
+							+ selectedStock
+							+ "';";
 				} else if (updateQuantity < 0) {
 					System.out.println("*** Else If");
 					// Error quantity value. Return to error Page
 				} else {
 					System.out.println("INSIDE ELSE");
-					query = "update public\"UserStockData\" set quantity=" + updateQuantity + " where username='" + username + "' and stocksymbol='"
-							+ selectedStock + "';";
+					query = "update public\"UserStockData\" set quantity="
+							+ updateQuantity + " where username='" + username
+							+ "' and stocksymbol='" + selectedStock + "';";
 				}
 
 				System.out.println("Query String UPDATE RECORD: " + query);
@@ -118,7 +119,8 @@ public class SellStocks extends HttpServlet {
 		}
 	}
 
-	private int updateVirtualBalance(String username, String quantity, String todayPrice) {
+	private int updateVirtualBalance(String username, String quantity,
+			String todayPrice) {
 		Connection c = null;
 		Statement stmt = null;
 		try {
@@ -126,18 +128,23 @@ public class SellStocks extends HttpServlet {
 			double dPurchaseVal = Double.parseDouble(todayPrice);
 			double virtualAmount = iQuantity * dPurchaseVal;
 			Class.forName("org.postgresql.Driver");
-			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SVM", "postgres", "cs422");
+			c = DriverManager
+					.getConnection("jdbc:postgresql://localhost:5432/SVM",
+							"postgres", "cs422");
 			System.out.println("Opened Database successfully");
 			stmt = c.createStatement();
 			String userAmount = getUserAmount(username);
 			double dUserAmt = Double.parseDouble(userAmount);
 			virtualAmount = dUserAmt + virtualAmount;
-			Double truncatedDouble = new BigDecimal(virtualAmount).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+			Double truncatedDouble = new BigDecimal(virtualAmount).setScale(2,
+					BigDecimal.ROUND_HALF_UP).doubleValue();
 			virtualAmount = truncatedDouble.doubleValue();
 			if (virtualAmount < 0) {
 				return -1;
 			} else {
-				String query = "update public.\"Login\" set virtualbalance='" + virtualAmount + "' where username='" + username + "';";
+				String query = "update public.\"Login\" set virtualbalance='"
+						+ virtualAmount + "' where username='" + username
+						+ "';";
 				System.out.println("Query String: " + query);
 
 				int result = stmt.executeUpdate(query.toString());
@@ -166,10 +173,14 @@ public class SellStocks extends HttpServlet {
 		String userVirtualBal = "";
 		try {
 			Class.forName("org.postgresql.Driver");
-			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SVM", "postgres", "cs422");
+			c = DriverManager
+					.getConnection("jdbc:postgresql://localhost:5432/SVM",
+							"postgres", "cs422");
 			System.out.println("Opened Database successfully");
 			stmt = c.createStatement();
-			rs = stmt.executeQuery("select virtualbalance from public.\"Login\" where username='" + username + "';");
+			rs = stmt
+					.executeQuery("select virtualbalance from public.\"Login\" where username='"
+							+ username + "';");
 			if (rs.next()) {
 				userVirtualBal = rs.getString(1);
 			}
@@ -192,19 +203,23 @@ public class SellStocks extends HttpServlet {
 				}
 			}
 		}
-
 		return userVirtualBal;
-
 	}
 
 	private int checkStockQuantity(String username, String selectedStock) {
 		int quantity = 0;
 		try {
 			Class.forName("org.postgresql.Driver");
-			Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SVM", "postgres", "cs422");
+			Connection c = DriverManager
+					.getConnection("jdbc:postgresql://localhost:5432/SVM",
+							"postgres", "cs422");
 			Statement stmt = c.createStatement();
-			ResultSet rs = stmt.executeQuery("select quantity from public.\"UserStockData\" where username='" + username + "' and stocksymbol='"
-					+ selectedStock + "';");
+			ResultSet rs = stmt
+					.executeQuery("select quantity from public.\"UserStockData\" where username='"
+							+ username
+							+ "' and stocksymbol='"
+							+ selectedStock
+							+ "';");
 			if (rs.next()) {
 				quantity = Integer.parseInt(rs.getString(1));
 			}
@@ -219,11 +234,13 @@ public class SellStocks extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 
 		String selectedStock = request.getParameter("StockSymbol").toString();
 		String quantity = request.getParameter("quantity").toString();
-		String username = request.getSession().getAttribute("theName").toString();
+		String username = request.getSession().getAttribute("theName")
+				.toString();
 
 		String todayPrice = getTodayQuote(selectedStock);
 
@@ -231,7 +248,8 @@ public class SellStocks extends HttpServlet {
 
 		System.out.println("*** available: " + available);
 		if (available < Integer.parseInt(quantity)) {
-			request.getSession().setAttribute("stockError", "Requested quantity is more than what is available.");
+			request.getSession().setAttribute("stockError",
+					"Requested quantity is more than what is available.");
 			response.sendRedirect("SellStock.jsp");
 		} else {
 			updateRecord(username, selectedStock, quantity);
@@ -242,8 +260,6 @@ public class SellStocks extends HttpServlet {
 			} else {
 				response.sendRedirect("Error.jsp");
 			}
-
 		}
 	}
-
 }

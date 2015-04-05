@@ -32,7 +32,7 @@
     <servlet-name>PurchaseStocks</servlet-name>
     <url-pattern>/PurchaseStocks</url-pattern>
   </servlet-mapping>
-  <servlet>
+   <servlet>
     <servlet-name>SellStocks</servlet-name>
     <servlet-class>databases.SellStocks</servlet-class>
   </servlet>
