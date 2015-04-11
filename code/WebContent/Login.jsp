@@ -35,7 +35,7 @@
 					PASSWORD: <input type="password" name="pw" required="required">
 				</h4>
 				<div>
-					<input type="submit" class="btn btn-info btn-lg btn-block"
+					<input type="submit" class="btn btn-info btn-block"
 						value="SIGN IN" /> <a class="fp" href="ForgotPassword.jsp">Forgot
 						Password</a>
 				</div>

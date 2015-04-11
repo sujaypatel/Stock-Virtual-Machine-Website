@@ -106,6 +106,13 @@
 <%
 	userPortfolios.clear();
 	userStockSymbols.clear();
+	if (session.getAttribute("theName") == null) {
+
+		RequestDispatcher dispatcher = getServletContext()
+				.getRequestDispatcher("/Login.jsp");
+		dispatcher.forward(request, response);
+		System.out.println("***theName == NULL");
+	} 
 	if (request.getSession().getAttribute("theName") != null) {
 		userPortfolios = getPortfolioForUser(request.getSession()
 				.getAttribute("theName").toString());
@@ -141,7 +148,7 @@
 	<div class="navbar navbar-default">
 		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
 			class="backtoPortfolio" href="Portfolio.jsp"> Back To Portfolio </a>
-		<a class="backtoPortfolio" href="Logout.jsp"> Logout </a>
+		<a class="backtoPortfolio" href="LogoutServlet"> Logout </a>
 	</div>
 	<center>
 		<h1>Search Stocks</h1>

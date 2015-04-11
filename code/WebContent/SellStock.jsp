@@ -12,44 +12,79 @@
 <link href='http://fonts.googleapis.com/css?family=Righteous'
 	rel='stylesheet' type='text/css'>
 <title>Sell Stock Page</title>
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script
+	src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+		// Setup for validation
+		$("#SellStock-form").validate({
+			// Specify the validation rules
+			rules : {
+				StockSymbol : {
+					required : true,
+				},
+				quantity : {
+					required : true,
+					number : true,
+					digits : true,
+				},
+			},
+			submitHandler : function(form) {
+				form.submit();
+			}
+		});
+	});
+</script>
+
 </head>
 <body>
 	<div class="navbar navbar-default">
 		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
 			class="backtoPortfolio" href="Portfolio.jsp"> Back To Portfolio </a>
-		<a class="backtoPortfolio" href="Logout.jsp"> Logout </a>
+		<a class="backtoPortfolio" href="LogoutServlet"> Logout </a>
 	</div>
 	<%
 		String userVirtualBal = "";
-		String username = session.getAttribute("theName").toString();
-		Connection c1 = null;
-		Statement stmt1 = null;
-		ResultSet rs1 = null;
-		try {
-			Class.forName("org.postgresql.Driver");
-			c1 = DriverManager.getConnection(
-					"jdbc:postgresql://localhost:5432/SVM", "postgres",
-					"cs422");
-			System.out
-					.println("Database successfully - User Login  Redirecting to Portfolio");
-			stmt1 = c1.createStatement();
-			rs1 = stmt1
-					.executeQuery("select virtualbalance from public.\"Login\" where username='"
-							+ username + "';");
-			if (rs1.next()) {
-				userVirtualBal = rs1.getString(1);
-				System.out.println("Virtual Balance: $" + rs1.getString(1));
-			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		} finally {
-			if (c1 != null) {
-				try {
-					rs1.close();
-					stmt1.close();
-					c1.close();
-				} catch (Exception ex) {
-					ex.printStackTrace();
+		if (session.getAttribute("theName") == null) {
+
+			RequestDispatcher dispatcher = getServletContext()
+					.getRequestDispatcher("/Login.jsp");
+			dispatcher.forward(request, response);
+			System.out.println("***theName == NULL");
+		} else {
+			String username = session.getAttribute("theName").toString();
+			Connection c1 = null;
+			Statement stmt1 = null;
+			ResultSet rs1 = null;
+			try {
+				Class.forName("org.postgresql.Driver");
+				c1 = DriverManager.getConnection(
+						"jdbc:postgresql://localhost:5432/SVM", "postgres",
+						"cs422");
+				System.out
+						.println("Database successfully - User Login  Redirecting to Portfolio");
+				stmt1 = c1.createStatement();
+				rs1 = stmt1
+						.executeQuery("select virtualbalance from public.\"Login\" where username='"
+								+ username + "';");
+				if (rs1.next()) {
+					userVirtualBal = rs1.getString(1);
+					System.out.println("Virtual Balance: $"
+							+ rs1.getString(1));
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			} finally {
+				if (c1 != null) {
+					try {
+						rs1.close();
+						stmt1.close();
+						c1.close();
+					} catch (Exception ex) {
+						ex.printStackTrace();
+					}
 				}
 			}
 		}
@@ -71,7 +106,7 @@
 			Virtual Balance: $
 			<%=userVirtualBal%>
 		</h3>
-		<form ACTION="SellStocks" method="post">
+		<form ACTION="SellStocks" method="post" id="#SellStock-form">
 			<div id="move_right">
 				<h4>
 					Select a Company: <select id="StockSymbol" name="StockSymbol">

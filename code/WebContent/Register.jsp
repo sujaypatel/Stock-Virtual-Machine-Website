@@ -55,12 +55,12 @@
 							required="required">
 					</h4>
 					<h4>
-						<i class="fa fa-user"></i> <input type="text" name="username" placeholder="Username"
-							required="required">
+						<i class="fa fa-user"></i> <input type="text" name="username"
+							placeholder="Username" required="required">
 					</h4>
 					<h4>
-						<i class="fa fa-lock"></i> <input type="password" name="password" placeholder="Password"
-							required="required">
+						<i class="fa fa-lock"></i> <input type="password" name="password"
+							placeholder="Password" required="required">
 					</h4>
 					<h4>
 						<input type="password" name="confirmPassword"
@@ -88,9 +88,8 @@
 						<input type="text" name="answer" placeholder="Answer"
 							required="required">
 					</h4>
-					<input type="submit" class="btn btn-success btn-lg"
-						value="REGISTER">
 				</div>
+				<input type="submit" class="btn btn-success" value="REGISTER">
 			</center>
 		</form>
 	</div>

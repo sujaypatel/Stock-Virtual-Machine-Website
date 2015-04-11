@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -146,7 +145,7 @@ public class SellStocks extends HttpServlet {
 				System.out.println("Query String: " + query);
 
 				stmt.executeUpdate(query.toString());
-		
+
 				return 0;
 			}
 
@@ -244,21 +243,31 @@ public class SellStocks extends HttpServlet {
 		String todayPrice = getTodayQuote(selectedStock);
 
 		int available = checkStockQuantity(username, selectedStock);
-
 		System.out.println("*** available: " + available);
-		if (available < Integer.parseInt(quantity)) {
-			request.getSession().setAttribute("stockError",
-					"Requested quantity is more than what is available.");
-			response.sendRedirect("SellStock.jsp");
-		} else {
-			updateRecord(username, selectedStock, quantity);
-
-			int result = updateVirtualBalance(username, quantity, todayPrice);
-			if (result == 0) {
-				response.sendRedirect("Portfolio.jsp");
-			} else {
-				response.sendRedirect("Error.jsp");
+		try {
+			request.getSession().removeAttribute("stockError");
+			if (Integer.parseInt(quantity) > 0) {
+				if (available < Integer.parseInt(quantity)) {
+					request.getSession()
+							.setAttribute("stockError",
+									"Requested quantity is more than what is available.");
+					response.sendRedirect("SellStock.jsp");
+				} else {
+					updateRecord(username, selectedStock, quantity);
+					int result = updateVirtualBalance(username, quantity,
+							todayPrice);
+					if (result == 0) {
+						response.sendRedirect("Portfolio.jsp");
+						request.getSession().removeAttribute("stockError");
+					} else {
+						response.sendRedirect("Error.jsp");
+					}
+				}
 			}
+		} catch (NumberFormatException e) {
+			request.getSession().setAttribute("stockError",
+					"Error, not a number. Enter number > 0. Please try again!");
+			response.sendRedirect("SellStock.jsp");
 		}
 	}
 }

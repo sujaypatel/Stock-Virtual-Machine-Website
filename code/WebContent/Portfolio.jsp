@@ -102,11 +102,51 @@
 		}
 		return folios;
 	}%>
-
 <%
+	String userVirtualBal = "";
 	userPortfolios.clear();
 	userStockSymbols.clear();
-	if (request.getSession().getAttribute("theName") != null) {
+	if (session.getAttribute("theName") == null) {
+
+		RequestDispatcher dispatcher = getServletContext()
+				.getRequestDispatcher("/Login.jsp");
+		dispatcher.forward(request, response);
+		System.out.println("***theName == NULL");
+	} else if (request.getSession().getAttribute("theName") != null) {
+		String username = session.getAttribute("theName").toString();
+		Connection c1 = null;
+		Statement stmt1 = null;
+		ResultSet rs1 = null;
+		try {
+			Class.forName("org.postgresql.Driver");
+			c1 = DriverManager.getConnection(
+					"jdbc:postgresql://localhost:5432/SVM", "postgres",
+					"cs422");
+			System.out
+					.println("Database successfully - User Login  Redirecting to Portfolio");
+			stmt1 = c1.createStatement();
+			rs1 = stmt1
+					.executeQuery("select virtualbalance from public.\"Login\" where username='"
+							+ username + "';");
+			if (rs1.next()) {
+				userVirtualBal = rs1.getString(1);
+				System.out.println("Virtual Balance: $"
+						+ rs1.getString(1));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (c1 != null) {
+				try {
+					rs1.close();
+					stmt1.close();
+					c1.close();
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+			}
+		}
+
 		userPortfolios = getPortfolioForUser(request.getSession()
 				.getAttribute("theName").toString());
 		if (userPortfolios.isEmpty()) {
@@ -140,44 +180,8 @@
 <body>
 	<div class="navbar navbar-default">
 		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
-			class="logout" href="Logout.jsp"> Logout </a>>
+			class="logout" href="LogoutServlet"> Logout </a>>
 	</div>
-	<%
-		String userVirtualBal = "";
-		String username = session.getAttribute("theName").toString();
-		;
-		Connection c1 = null;
-		Statement stmt1 = null;
-		ResultSet rs1 = null;
-		try {
-			Class.forName("org.postgresql.Driver");
-			c1 = DriverManager.getConnection(
-					"jdbc:postgresql://localhost:5432/SVM", "postgres",
-					"cs422");
-			System.out
-					.println("Database successfully - User Login  Redirecting to Portfolio");
-			stmt1 = c1.createStatement();
-			rs1 = stmt1
-					.executeQuery("select virtualbalance from public.\"Login\" where username='"
-							+ username + "';");
-			if (rs1.next()) {
-				userVirtualBal = rs1.getString(1);
-				System.out.println("Virtual Balance: $" + rs1.getString(1));
-			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		} finally {
-			if (c1 != null) {
-				try {
-					rs1.close();
-					stmt1.close();
-					c1.close();
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-			}
-		}
-	%>
 	<center>
 		<h1>Portfolio</h1>
 		<div id="move_right">
@@ -239,7 +243,7 @@
 		</div>
 	</center>
 	<br>
-	<div class="navbar navbar-default">
+	<div id="footer" class="navbar navbar-default">
 		<center>
 			<div class="copyright">Copyright &copy; 2015 &middot; All
 				Rights Reserved &middot;</div>

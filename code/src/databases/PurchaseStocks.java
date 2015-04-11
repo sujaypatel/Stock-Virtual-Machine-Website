@@ -198,6 +198,7 @@ public class PurchaseStocks extends HttpServlet {
 							"No Stock Data Available for this stock. Choose another stock");
 			response.sendRedirect("BuyStock.jsp");
 		} else {
+			request.getSession().removeAttribute("stockError");
 			double dPurchaseValue = Double.parseDouble(purchaseValue);
 			if (dVirtualAmount < (iQuantity * dPurchaseValue)) {
 				request.getSession().setAttribute("stockError",
@@ -205,7 +206,6 @@ public class PurchaseStocks extends HttpServlet {
 				response.sendRedirect("BuyStock.jsp");
 			} else {
 				updateRecord(username, selectedStock, quantity, purchaseValue);
-
 				try {
 					updateVirtualBalance(username, quantity, purchaseValue);
 					request.getSession().removeAttribute("stockError");
