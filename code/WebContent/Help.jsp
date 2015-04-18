@@ -83,6 +83,20 @@
 			</script>
 			<button class="btn btn-info" id="login">LOGIN</button>
 			<br> <br>
+			<p>1.What if I forget my login password?</p>
+			<p id="p1">If you forget your password, you can click on forgot
+				password and enter necessary information and your password will be
+				sent to your email.</p>
+			<p>2.Can I customize the website according to my preferences
+				after I login?</p>
+			<p id="p1">No, you will not be able to customize the website.
+				Although, you will have a customized page for you called the
+				portfolio.</p>
+			<p>3. Do I have to logout or does the website log me out when I
+				leave the website?</p>
+			<p id="p1">You will have to click logout once you are done using
+				the website. After you click logout, you will be taken to the page
+				that states you have successfully logged out.</p>
 		</fieldset>
 		<fieldset>
 			<script>
@@ -93,8 +107,23 @@
 				});
 			</script>
 			<button class="btn btn-info" id="registration">REGISTRATION</button>
-			<br><br>
-
+			<br> <br>
+			<p>1.Where can we register?</p>
+			<p id="p1">On the main page, click on the "register" tab on the
+				top right corner.</p>
+			<p>2.What are some of the benefits of registering for the stock
+				virtual machine?</p>
+			<p id="p1">You will be able to use the stock virtual machine to
+				see how you could use shares in real life.</p>
+			<p>3.Do I get miscellaneous email from Stock virtual machine once
+				I register?</p>
+			<p id="p1">No, you will only receive emails from us if you forget
+				your password. In that case, your password will be forwarded to your
+				email.</p>
+			<p>4.Does my portfolio already provide me with virtual money when
+				I register?</p>
+			<p id="p1">Yes! Once you have registered, you will be provided
+				with $1,000 virtual dollars.</p>
 		</fieldset>
 		<fieldset>
 			<script>
@@ -105,11 +134,23 @@
 				});
 			</script>
 			<button class="btn btn-info" id="portfolio">PORTFOLIO</button>
-			<br> <br> <img src="images/HelpUs.jpg" height="150" width="175"
-				HSPACE=10>
+			<br><br>
+			<p>1.Where do I view my portfolio?</p>
+			<p id="p1">After you login, you will be taken to your portfolio
+				page.</p>
+			<p>2.Does my portfolio already provide me with virtual money when
+				I register?</p>
+			<p id="p1">Yes! Once you have registered, you will be provided
+				with $1,000 virtual dollars.</p>
+			<p>3.What can I do on my portfolio?</p>
+			<p id="p1">On you portfolio page, you can buy,sell, and search
+				for stocks by using the "Buy", "Sell", and "Search" buttons.</p>
+			<p>4.Who can view my portfolio page?</p>
+			<p id="p1">No one! Only you can view your own portfolio page.</p>
 		</fieldset>
+		<br> <br> <img src="images/HelpUs.jpg" height="150"
+			width="175" HSPACE=10>
 	</div>
-	<br>
 	<div class="navbar navbar-default">
 		<center>
 			<div class="copyright">Copyright &copy; 2015 &middot; All
