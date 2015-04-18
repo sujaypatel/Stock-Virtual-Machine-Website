@@ -1,40 +1,53 @@
 @CHARSET "ISO-8859-1";
 
+@import url(fontStyle.css);
+
 .label {
-  width:100px;
-  text-align:bottom;
-  float:left;
-  padding-right:10px;
-  font-weight:bold;
+	width: 100px;
+	text-align: bottom;
+	float: left;
+	padding-right: 10px;
+	font-weight: bold;
 }
+#register-form label.error {
+	color: #FB3A3A;
+	font-weight: bold;
+	display: block;
+}
+
 #BuyStock-form label.error {
-  color:#FB3A3A;
-  font-weight:bold;
-  display: block;
-  padding-top: 3%;
+	color: #FB3A3A;
+	font-weight: bold;
+	display: block;
+	padding-top: 3%;
 }
+
 #SellStock-form label.error {
-  color:#FB3A3A;
-  font-weight:bold;
-  display: block;
-  padding-top: 3%;
+	color: #FB3A3A;
+	font-weight: bold;
+	display: block;
+	padding-top: 3%;
 }
+
 h1 {
-  font-weight: 100;
-  color:#333;
-  padding-bottom:20px;
+	font-weight: 100;
+	color: #333;
+	padding-bottom: 20px;
 }
 
 /*Login Page - Icons for UserName and Password */
-.Input_Icons { position: relative; }
+.Input_Icons {
+	position: relative;
+}
+
 .Input_Icons .fa {
-	color: #800040;
+	color: #0B5379;
 	position: absolute;
-	left: 10px;
+	left: 558px;
 	top: 10px;
 }
-.Input_Icons input, 
-.Input_Icons textarea {
+
+.Input_Icons input, .Input_Icons textarea {
 	padding-left: 30px;
 }
 

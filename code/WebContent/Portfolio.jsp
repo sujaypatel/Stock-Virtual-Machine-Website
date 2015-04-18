@@ -243,11 +243,11 @@
 		</div>
 	</center>
 	<br>
-	<div id="footer" class="navbar navbar-default">
+	<!-- <div id="footer" class="navbar navbar-default">
 		<center>
 			<div class="copyright">Copyright &copy; 2015 &middot; All
 				Rights Reserved &middot;</div>
 		</center>
-	</div>
+	</div> -->
 </body>
 </html>

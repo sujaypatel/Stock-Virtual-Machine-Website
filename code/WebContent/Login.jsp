@@ -26,7 +26,7 @@
 				<br>
 				<h1>Login To Stock Virtual Machine</h1>
 			</div>
-			<br>
+
 			<div id="move_right">
 				<h4>
 					USERNAME: <input type="text" name="un" required="required">

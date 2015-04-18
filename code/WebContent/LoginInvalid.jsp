@@ -32,7 +32,7 @@
 		<h3>
 			<b>Sorry, you are not a registered user! Please sign up first</b>
 		</h3>
-		<br> <a href="Register.jsp" class='button2'> Register Now </a>
+		<br> <a href="Register.jsp" class="btn btn-success"> Register Now </a>
 	</center>
 </body>
 </html>

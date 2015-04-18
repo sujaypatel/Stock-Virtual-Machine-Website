@@ -35,7 +35,7 @@
 				});
 			</script>
 			<button id="faq" class="btn btn-info">FAQ</button>
-			<br> </br>
+			<br> <br>
 			<p>1.What is a share?</p>
 			<p id="p1">In the US shares are referred to as stocks. A share is
 				a single unit of ownership of a company.</p>
@@ -82,7 +82,7 @@
 				});
 			</script>
 			<button class="btn btn-info" id="login">LOGIN</button>
-			<br> </br>
+			<br> <br>
 		</fieldset>
 		<fieldset>
 			<script>
@@ -93,7 +93,7 @@
 				});
 			</script>
 			<button class="btn btn-info" id="registration">REGISTRATION</button>
-			<br> </br>
+			<br><br>
 
 		</fieldset>
 		<fieldset>
@@ -105,7 +105,7 @@
 				});
 			</script>
 			<button class="btn btn-info" id="portfolio">PORTFOLIO</button>
-			<br> </br> <img src="images/HelpUs.jpg" height="150" width="175"
+			<br> <br> <img src="images/HelpUs.jpg" height="150" width="175"
 				HSPACE=10>
 		</fieldset>
 	</div>

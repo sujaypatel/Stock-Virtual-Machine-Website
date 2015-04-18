@@ -38,6 +38,22 @@
 	});
 </script>
 
+
+<script type="text/javascript">
+	$(function() {
+
+		// Setup for validation
+		$("#SellStock-form").validate({
+			// Specify the validation rules
+			rules : {
+				Quantity : "required",
+			},
+			submitHandler : function(form) {
+				form.submit();
+			}
+		});
+	});
+</script>
 </head>
 <body>
 	<div class="navbar navbar-default">
@@ -106,7 +122,7 @@
 			Virtual Balance: $
 			<%=userVirtualBal%>
 		</h3>
-		<form ACTION="SellStocks" method="post" id="#SellStock-form">
+		<form ACTION="SellStocks" method="post" id="SellStock-form">
 			<div id="move_right">
 				<h4>
 					Select a Company: <select id="StockSymbol" name="StockSymbol">
@@ -148,13 +164,12 @@
 						%>
 					</select>
 				</h4>
-
 				<h4>
-					Selling Quantity: <input type="text" size="3" name="quantity"
-						required="required">
+					Selling Quantity: <input type="text" size="3" name="quantity">
 				</h4>
 				<input id="Sell" class="btn btn-danger" type="submit" value="Sell">
-				<br>
+				<br> <img src="images/Sell.png" height="200" width="200"
+					HSPACE=10>
 			</div>
 		</form>
 	</center>

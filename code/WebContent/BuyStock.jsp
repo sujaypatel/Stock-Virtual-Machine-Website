@@ -165,8 +165,7 @@
 				</h4>
 
 				<h4>
-					Buying Quantity: <input type="text" size="3" name="quantity"
-						required="required">
+					Buying Quantity: <input type="text" size="3" name="quantity">
 				</h4>
 				<input id="Buy" class="btn btn-success" type="submit"
 					value="PURCHASE"> <br> <img src="images/Buy.jpg"

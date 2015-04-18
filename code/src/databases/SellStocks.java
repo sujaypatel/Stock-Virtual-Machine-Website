@@ -266,7 +266,7 @@ public class SellStocks extends HttpServlet {
 			}
 		} catch (NumberFormatException e) {
 			request.getSession().setAttribute("stockError",
-					"Error, not a number. Enter number > 0. Please try again!");
+					"Please enter an integer less than 999,999. Try again!");
 			response.sendRedirect("SellStock.jsp");
 		}
 	}

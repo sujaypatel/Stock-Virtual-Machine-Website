@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -189,17 +190,27 @@ public class PurchaseStocks extends HttpServlet {
 		String virtualAmount = getUserAmount(username);
 		String purchaseValue = getTodayQuote(selectedStock);
 		double dVirtualAmount = Double.parseDouble(virtualAmount);
-		int iQuantity = Integer.parseInt(quantity);
+		int iQuantity = 0;
 
 		System.out.println("*** purchaseValue: " + purchaseValue);
 		if (null != purchaseValue && purchaseValue.equalsIgnoreCase("")) {
 			request.getSession()
 					.setAttribute("stockError",
 							"No Stock Data Available for this stock. Choose another stock");
-			response.sendRedirect("BuyStock.jsp");
+			RequestDispatcher dd = request.getRequestDispatcher("BuyStock.jsp");
+			dd.forward(request, response);
+
 		} else {
 			request.getSession().removeAttribute("stockError");
 			double dPurchaseValue = Double.parseDouble(purchaseValue);
+			try {
+				iQuantity = Integer.parseInt(quantity);
+			} catch (NumberFormatException ex) {
+				request.getSession().setAttribute("stockError",
+						"Please enter an integer less than 999,999");
+				response.sendRedirect("BuyStock.jsp");
+				return;
+			}
 			if (dVirtualAmount < (iQuantity * dPurchaseValue)) {
 				request.getSession().setAttribute("stockError",
 						"Insufficient account balance to purchase stocks.");
