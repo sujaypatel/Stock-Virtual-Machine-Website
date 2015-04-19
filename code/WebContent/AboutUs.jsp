@@ -22,7 +22,7 @@
 		</ul>
 	</div>
 	<center>
-		<div class=FormDesign>
+		<div>
 			<div>
 				<h1>
 					<b>About Us</b>

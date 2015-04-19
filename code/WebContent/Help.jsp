@@ -29,13 +29,15 @@
 		<fieldset>
 			<script>
 				$(document).ready(function() {
+					$('.faqContent').hide();
 					$("#faq").click(function() {
-						$("#p1,#p2, p").slideToggle("slow");
+						$(".faqContent").slideToggle("slow");
 					});
 				});
 			</script>
 			<button id="faq" class="btn btn-info">FAQ</button>
 			<br> <br>
+			<section class="faqContent">
 			<p>1.What is a share?</p>
 			<p id="p1">In the US shares are referred to as stocks. A share is
 				a single unit of ownership of a company.</p>
@@ -51,11 +53,7 @@
 				buy and sell their shares online. Years ago you would have needed to
 				telephone a broker to buy and sell shares for you. Most brokers are
 				now online and you can buy and sell shares anywhere with a computer
-				and an internet connection. Online stock market investing has been
-				around for so long that there are now legal safeguards in place to
-				protect individual investors from fraud or the bankruptcy of your
-				stockbroker. Always read the terms and conditions carefully of any
-				online stockbroker you would like to invest with.</p>
+				and an internet connection.</p>
 			<p>5.Does the shareholder own the company?</p>
 			<p id="p1">Being a shareholder is about having a vested interest
 				in a company, its prospects, its financial position and the way it
@@ -63,26 +61,28 @@
 			<p>6.What are dividends?</p>
 			<p id="p1">They are payments made to shareholders out of the
 				money a company makes. For example, if you have 100 shares in
-				Glaxosmithkline and they pay a yearly dividend of 1.00, you would
-				receive 100.00 a year from Glaxosmithkline in dividends (100 shares
+				YHOO.INC and they pay a yearly dividend of 1.00, you would
+				receive 100.00 a year from YHOO.INC in dividends (100 shares
 				x 1.00 dividend).</p>
 			<p>7.Why do companies issue shares?</p>
 			<p id="p1">Stock exchanges allow companies issue shares to the
 				public in exchange for cash.The amount of cash each company gets
 				from issuing shares depends upon how many shares they issue and how
 				much each of their shares are worth.</p>
-
+			</section>
 		</fieldset>
 		<fieldset>
 			<script>
 				$(document).ready(function() {
+					$('.loginContent').hide();
 					$("#login").click(function() {
-						$("p").slideToggle("slow");
+						$(".loginContent").slideToggle("slow");
 					});
 				});
 			</script>
 			<button class="btn btn-info" id="login">LOGIN</button>
 			<br> <br>
+			<section class="loginContent">
 			<p>1.What if I forget my login password?</p>
 			<p id="p1">If you forget your password, you can click on forgot
 				password and enter necessary information and your password will be
@@ -97,19 +97,22 @@
 			<p id="p1">You will have to click logout once you are done using
 				the website. After you click logout, you will be taken to the page
 				that states you have successfully logged out.</p>
+			</section>
 		</fieldset>
 		<fieldset>
 			<script>
 				$(document).ready(function() {
+					$('.registrationContent').hide();
 					$("#registration").click(function() {
-						$("p").slideToggle("slow");
+						$(".registrationContent").slideToggle("slow");
 					});
 				});
 			</script>
 			<button class="btn btn-info" id="registration">REGISTRATION</button>
 			<br> <br>
+			<section class="registrationContent">
 			<p>1.Where can we register?</p>
-			<p id="p1">On the main page, click on the "register" tab on the
+			<p id="p1">On the main page, click on the "Sign Up" tab on the
 				top right corner.</p>
 			<p>2.What are some of the benefits of registering for the stock
 				virtual machine?</p>
@@ -117,24 +120,28 @@
 				see how you could use shares in real life.</p>
 			<p>3.Do I get miscellaneous email from Stock virtual machine once
 				I register?</p>
-			<p id="p1">No, you will only receive emails from us if you forget
+			<p id="p1">No, you will only receive email from us if you forget
 				your password. In that case, your password will be forwarded to your
 				email.</p>
 			<p>4.Does my portfolio already provide me with virtual money when
 				I register?</p>
 			<p id="p1">Yes! Once you have registered, you will be provided
 				with $1,000 virtual dollars.</p>
+			</section>
 		</fieldset>
 		<fieldset>
 			<script>
 				$(document).ready(function() {
+					$('.portfolioContent').hide();
 					$("#portfolio").click(function() {
-						$("p").slideToggle("slow");
+						$(".portfolioContent").slideToggle("slow");
 					});
 				});
 			</script>
+
 			<button class="btn btn-info" id="portfolio">PORTFOLIO</button>
-			<br><br>
+			<br> <br>
+			<section class="portfolioContent">
 			<p>1.Where do I view my portfolio?</p>
 			<p id="p1">After you login, you will be taken to your portfolio
 				page.</p>
@@ -147,6 +154,7 @@
 				for stocks by using the "Buy", "Sell", and "Search" buttons.</p>
 			<p>4.Who can view my portfolio page?</p>
 			<p id="p1">No one! Only you can view your own portfolio page.</p>
+			</section>
 		</fieldset>
 		<br> <br> <img src="images/HelpUs.jpg" height="150"
 			width="175" HSPACE=10>
