@@ -35,8 +35,8 @@
 					});
 				});
 			</script>
-			<button id="faq" class="btn btn-info">FAQ</button>
-			<br> <br>
+			<center> <button id="faq" class="btn btn-info">FAQ</button> </center>
+			<br>
 			<section class="faqContent">
 			<p>1.What is a share?</p>
 			<p id="p1">In the US shares are referred to as stocks. A share is
@@ -80,8 +80,8 @@
 					});
 				});
 			</script>
-			<button class="btn btn-info" id="login">LOGIN</button>
-			<br> <br>
+			<center><button class="btn btn-info" id="login">LOGIN</button></center>
+			<br>
 			<section class="loginContent">
 			<p>1.What if I forget my login password?</p>
 			<p id="p1">If you forget your password, you can click on forgot
@@ -108,8 +108,8 @@
 					});
 				});
 			</script>
-			<button class="btn btn-info" id="registration">REGISTRATION</button>
-			<br> <br>
+			<center><button class="btn btn-info" id="registration">REGISTRATION</button></center>
+			<br> 
 			<section class="registrationContent">
 			<p>1.Where can we register?</p>
 			<p id="p1">On the main page, click on the "Sign Up" tab on the
@@ -139,8 +139,8 @@
 				});
 			</script>
 
-			<button class="btn btn-info" id="portfolio">PORTFOLIO</button>
-			<br> <br>
+			<center><button class="btn btn-info" id="portfolio">PORTFOLIO</button></center>
+			<br> 
 			<section class="portfolioContent">
 			<p>1.Where do I view my portfolio?</p>
 			<p id="p1">After you login, you will be taken to your portfolio
@@ -156,8 +156,8 @@
 			<p id="p1">No one! Only you can view your own portfolio page.</p>
 			</section>
 		</fieldset>
-		<br> <br> <img src="images/HelpUs.jpg" height="150"
-			width="175" HSPACE=10>
+		<br> <br> <center><img src="images/HelpUs.jpg" height="150"
+			width="175"></center>
 	</div>
 	<div class="navbar navbar-default">
 		<center>

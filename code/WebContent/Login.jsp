@@ -28,14 +28,19 @@
 			</div>
 
 			<div id="move_right">
-				<h4>
-					USERNAME: <input type="text" name="un" required="required">
-				</h4>
-				<h4>
-					PASSWORD: <input type="password" name="pw" required="required">
-				</h4>
+				<div class="Input_Icons">
+					<label> USERNAME: </label> <i class="fa fa-user"></i><input
+						type="text" name="un" required="required"
+						placeholder="Enter your Username">
+				</div>
+				<br>
+				<div class="Input_Icons">
+					<label> PASSWORD: </label> <i class="fa fa-lock"></i> <input
+						type="password" name="pw" required="required"
+						placeholder="Enter your Password">
+				</div>
 				<div>
-					<input type="submit" class="btn btn-info btn-block"
+					<br> <input type="submit" class="btn btn-info btn-block"
 						value="SIGN IN" /> <a class="fp" href="ForgotPassword.jsp">Forgot
 						Password</a>
 				</div>
