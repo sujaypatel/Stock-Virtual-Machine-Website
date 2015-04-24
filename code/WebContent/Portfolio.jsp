@@ -196,7 +196,17 @@
 			</h4>
 		</div>
 		<br> <br>
-		<div id="move_right">
+		<div id="move_left">
+			<TABLE class="table table-bordered table-striped">
+				<TR>
+					<TH COLSPAN="5" style="text-shadow: black;">High: the extreme
+						high price for the day. <br> Low: the extreme low price for
+						the day. <br> Close: the closing price for the day.
+					</TH>
+				</TR>
+			</TABLE>
+		</div>
+		<div id="move_right2">
 			<TABLE class="table table-bordered table-striped">
 				<TR>
 					<TH COLSPAN="5" style="text-shadow: black;">List of Owned
@@ -238,9 +248,9 @@
 			</TABLE>
 			<br>
 			<div>
-				<a href="BuyStock.jsp" class="btn btn-info"> Buy Stocks </a> <a
-					href="SellStock.jsp" class="btn btn-danger"> Sell Stocks </a> <a
-					href="Search.jsp" class="btn btn-primary"> Search </a>
+				<a href="Search.jsp" class="btn btn-primary"> Search </a> <a
+					href="BuyStock.jsp" class="btn btn-info"> Buy Stocks </a> <a
+					href="SellStock.jsp" class="btn btn-danger"> Sell Stocks </a>
 			</div>
 		</div>
 	</center>

@@ -201,6 +201,15 @@ th, td {
 	padding-right: 10px;
 	padding-left: 20px
 }
+#move_right2 {
+	display: inline-block;
+	  padding-right: 375px;
+}
+#move_left {
+	display: inline-block;
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
 
 #move_center {
 	display: inline-block;
