@@ -2,6 +2,7 @@
 
 @import url(fontStyle.css);
 
+
 .label {
 	width: 100px;
 	text-align: bottom;
@@ -9,10 +10,11 @@
 	padding-right: 10px;
 	font-weight: bold;
 }
+
 #register-form label.error {
 	color: #FB3A3A;
 	font-weight: bold;
-	display: block;
+	display: inline;
 }
 
 #BuyStock-form label.error {
@@ -42,9 +44,8 @@ h1 {
 
 .Input_Icons .fa {
 	color: #0B5379;
-	position: absolute;
-	left: 558px;
-	top: 10px;
+	position: relative;
+	left: 22px;
 }
 
 .Input_Icons input, .Input_Icons textarea {
@@ -200,6 +201,13 @@ th, td {
 	padding-right: 10px;
 	padding-left: 20px
 }
+
+#move_center {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 470px
+}
+
 
 #pos_of_breadcrumb {
 	padding-right: 93%;

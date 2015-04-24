@@ -60,7 +60,9 @@
 	<div class="navbar navbar-default">
 		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
 			class="backtoPortfolio" href="Portfolio.jsp"> Back To Portfolio </a>
-		<a class="backtoPortfolio" href="Logout.jsp"> Logout </a>
+		<a class="backtoPortfolio" href="LogoutServlet"
+			onclick="return confirm('Are you sure you want to Logout?');">
+			Logout </a>
 	</div>
 	<%
 		String userVirtualBal = "";

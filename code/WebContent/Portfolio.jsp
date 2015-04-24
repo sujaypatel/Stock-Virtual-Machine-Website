@@ -180,7 +180,9 @@
 <body>
 	<div class="navbar navbar-default">
 		<a class="home" href="Home.jsp">Stock Virtual Machine</a> <a
-			class="logout" href="LogoutServlet"> Logout </a>>
+			class="logout" href="LogoutServlet"
+			onclick="return confirm('Are you sure you want to Logout?');">
+			Logout </a>>
 	</div>
 	<center>
 		<h1>Portfolio</h1>
