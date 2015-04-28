@@ -199,9 +199,10 @@
 		<div id="move_left">
 			<TABLE class="table table-bordered table-striped">
 				<TR>
-					<TH COLSPAN="5" style="text-shadow: black;">High: the extreme
-						high price for the day. <br> Low: the extreme low price for
-						the day. <br> Close: the closing price for the day.
+					<TH COLSPAN="5" style="text-shadow: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						LEGEND<br>HIGH: the extreme high price for the day. <br>
+						LOW: the extreme low price for the day. <br> CLOSE: the
+						closing price for the day.
 					</TH>
 				</TR>
 			</TABLE>

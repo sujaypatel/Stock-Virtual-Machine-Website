@@ -8,6 +8,11 @@
 	rel='stylesheet' type='text/css'>
 <title>Login Page</title>
 </head>
+<%
+	if (session.getAttribute(("theName")) != null && (!session.getAttribute("theName").equals(""))) {
+		response.sendRedirect("Portfolio.jsp");
+	}
+%>
 <body id="login">
 	<div class="navbar navbar-default">
 		<span class="welcome"><a class="title" href="Home.jsp">Stock

@@ -246,6 +246,12 @@ public class SellStocks extends HttpServlet {
 		System.out.println("*** available: " + available);
 		try {
 			request.getSession().removeAttribute("stockError");
+			if (Integer.parseInt(quantity) == 0) {
+				request.getSession().setAttribute("stockError",
+						"Requested quantity to Sell Cannot be Zero.");
+				response.sendRedirect("SellStock.jsp");
+				return;
+			}
 			if (Integer.parseInt(quantity) > 0) {
 				if (available < Integer.parseInt(quantity)) {
 					request.getSession()

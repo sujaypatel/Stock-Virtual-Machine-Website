@@ -202,6 +202,12 @@ public class PurchaseStocks extends HttpServlet {
 
 		} else {
 			request.getSession().removeAttribute("stockError");
+			if (Integer.parseInt(quantity) == 0) {
+				request.getSession().setAttribute("stockError",
+						"Requested quantity to Buy Cannot be Zero.");
+				response.sendRedirect("BuyStock.jsp");
+				return;
+			}
 			double dPurchaseValue = Double.parseDouble(purchaseValue);
 			try {
 				iQuantity = Integer.parseInt(quantity);
